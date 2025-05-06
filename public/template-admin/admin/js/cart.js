@@ -23,16 +23,15 @@ const cartModule = {
     count: 0,
     items: [],
     getData: async () => {
-        // try {
-        //     return http.get("api/cart");
-        // } catch (error) {
-        //     alertErr(error.message);
-        // }
+        try {
+            return http.get("api/cart", { paginate: 0 });
+        } catch (error) {
+            alertErr(error.message);
+        }
     },
     addApi: async (id) => {
         const { message, data } = await http.post("api/cart", {
             document_id: id,
-            quantity: 1,
             type: "document",
         });
         alertSuccess(message);
@@ -79,7 +78,7 @@ const cartModule = {
                                         href="${urlDocument}"
                                     >
                                         <h5 class="m-0">
-                                            ${item.document.name}
+                                            ${item.document.title}
                                         </h5>
                                     </a>
                                     <h6 class="pt-1 m-0 text-danger">
@@ -116,9 +115,9 @@ const cartModule = {
     },
     init: function () {
         this.getData().then(({ data }) => {
-            if (data?.items) {
-                this.count = data.items.length;
-                this.items = data.items;
+            if (data) {
+                this.count = data.length;
+                this.items = data;
             }
             this.update();
         });
@@ -126,9 +125,11 @@ const cartModule = {
             e.stopPropagation(); // 👈 THÊM DÒNG NÀY
             const id = $(e.currentTarget).data("id");
             this.remove(id);
-            http.delete(`api/cart`, { id }).then(({ message }) => {
-                alertSuccess(message);
-            });
+            http.delete(`api/cart`, { id, type: "document" }).then(
+                ({ message }) => {
+                    alertSuccess(message);
+                }
+            );
         });
 
         this.element.checkAll.on("click", (e) => {

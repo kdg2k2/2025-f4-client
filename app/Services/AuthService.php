@@ -12,11 +12,13 @@ use Tymon\JWTAuth\Token;
 class AuthService extends BaseService
 {
     protected $userService;
+    protected $cartService;
     protected $customValidateService;
     public function __construct()
     {
         $this->userService = app(UserService::class);
         $this->customValidateService = app(CustomValidateRequestService::class);
+        $this->cartService = app(CartService::class);
     }
 
     public function login(array $request)
@@ -104,7 +106,7 @@ class AuthService extends BaseService
         ]);
     }
 
-    public function authGoogleCallback()
+    public function authGoogleCallback(): array
     {
         $client = new Client();
         $response = $client->post('https://oauth2.googleapis.com/token', [
@@ -133,7 +135,7 @@ class AuthService extends BaseService
             $existingUser = $this->newUserGoogle($userInfo);
             $existingUser = $this->userService->findById($existingUser['id']);
         }
-
+        $this->cartService->createCart($existingUser['id']);
         return $this->createTokenWithUserRecord($existingUser);
     }
 
@@ -154,7 +156,9 @@ class AuthService extends BaseService
                 unset($request['password_confirmation']);
             if (!isset($request['path']))
                 $request['path'] = null;
-            return $this->userService->store($request);
+            $user = $this->userService->store($request);
+            $this->cartService->createCart($user['id']);
+            return $user;
         });
     }
 }

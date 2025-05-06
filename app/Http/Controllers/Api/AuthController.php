@@ -9,7 +9,6 @@ use App\Http\Requests\Auth\RegisterRequest;
 use App\Services\AuthService;
 use App\Traits\CheckLocalTraits;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -75,7 +74,6 @@ class AuthController extends Controller
             ])->cookie('access_token', $data['access_token'], $data['access_token_expires_in'], '/', null, !$isLocal, true, false, 'Strict')
                 ->cookie('refresh_token', $data['refresh_token'], $data['refresh_token_expires_in'], '/', null, !$isLocal, true, false, 'Strict');
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
             return redirect()->route('login')->withErrors($e->getMessage());
         }
     }

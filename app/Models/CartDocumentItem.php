@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class CartDocumentItem extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function document()
+    {
+        return $this->belongsTo(Document::class, 'document_id');
+    }
 }
