@@ -13,6 +13,16 @@ class OrderService extends BaseService
         $this->orderRepository = app(OrderRepository::class);
     }
 
+    public function list(array $req)
+    {
+        return $this->tryThrow(function () use ($req) {
+            $records = $this->orderRepository->list($req);
+            if ($req["paginate"] == 1)
+                $records = $this->paginate($records, $req["per_page"], $req["page"]);
+            return $records;
+        });
+    }
+
     public function create(array $req)
     {
         return $this->tryThrow(function () use ($req) {

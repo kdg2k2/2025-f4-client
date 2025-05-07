@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use Exception;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class VnPayService extends BaseService
 {
@@ -12,6 +14,9 @@ class VnPayService extends BaseService
     protected $puService;
     protected $emailService;
     protected $opiService;
+    protected $ddService;
+    protected $odiService;
+
 
     public function __construct()
     {
@@ -21,6 +26,8 @@ class VnPayService extends BaseService
         $this->puService = app(PackageUserService::class);
         $this->emailService = app(EmailService::class);
         $this->opiService = app(OrderPackageItemService::class);
+        $this->ddService = app(DocumentDownloadService::class);
+        $this->odiService = app(OrderDocumentItemService::class);
     }
 
     public function createPayment(array $request)
@@ -171,18 +178,29 @@ class VnPayService extends BaseService
                         'id' => $payment->order_id,
                         'status' => 'paid',
                     ]);
-
-                    $item = $this->opiService->getOrderPackageItemByOrderId($payment->order_id);
-                    if (empty($item))
-                        throw new Exception('Order package item not found');
-
-                    $this->handleAfterPaySuccess([
-                        'user_id' => $payment->order->user_id,
-                        'package_id' => $item->package_id,
-                        'downloads_remaining' => $item->package->download_document_limit,
-                        'start_date' => $this->getCurrentTime(),
-                        'end_date' => date('Y-m-d', strtotime($this->getCurrentTime() . '+' . $item->package->duration_days . ' days')),
-                    ], $request['vnp_TxnRef']);
+                    if ($payment->order->type == 'package') {
+                        $item = $this->opiService->getOrderPackageItemByOrderId($payment->order_id);
+                        if (empty($item))
+                            return [
+                                'RspCode' => '01',
+                                'Message' => 'Order package item not found',
+                            ];
+                        $this->handleAfterPaySuccessForPackage([
+                            'user_id' => $payment->order->user_id,
+                            'package_id' => $item->package_id,
+                            'downloads_remaining' => $item->package->download_document_limit,
+                            'start_date' => $this->getCurrentTime(),
+                            'end_date' => date('Y-m-d', strtotime($this->getCurrentTime() . '+' . $item->package->duration_days . ' days')),
+                        ], $request['vnp_TxnRef']);
+                    } else {
+                        $items = $this->odiService->getItemsPriceThanZero($payment->order_id);
+                        if (empty($items))
+                            return [
+                                'RspCode' => '01',
+                                'Message' => 'Order document item not found',
+                            ];
+                        $this->handleAfterPaySuccessForNone($items->toArray(), $payment->order_id);
+                    }
                 }
             }
 
@@ -251,17 +269,43 @@ class VnPayService extends BaseService
             'request' => $request,
         ];
     }
-    protected function handleAfterPaySuccess($dataPu, $orderCode)
+    protected function handleAfterPaySuccessForPackage($dataPu, $orderCode)
     {
         $packageUser = $this->puService->create($dataPu);
-        // $this->emailService->sendMail(
-        //     'emails.payment',
-        //     'Thanh toán mua gói thành công',
-        //     [$packageUser->user->email],
-        //     [
-        //         'order_code' => $orderCode,
-        //     ],
-        //     []
-        // );
+        $this->sendMailPaymentSuccess(
+            $packageUser->user->email,
+            $orderCode
+        );
+    }
+
+    protected function handleAfterPaySuccessForNone(array $items, $orderId)
+    {
+        $ddItems = [];
+        foreach ($items as $item) {
+            $ddItems[] = [
+                'order_id' => $orderId,
+                'document_id' => $item['document_id'],
+                'code' => Str::uuid(),
+                'expires_at' => now()->addDays(2),
+                'ip_address' => request()->ip(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+        $this->ddService->createMany($ddItems);
+        // $this->sendMailPaymentSuccess();
+    }
+
+    protected function sendMailPaymentSuccess($email, $orderCode)
+    {
+        $this->emailService->sendMail(
+            'emails.payment',
+            'Thanh toán thành công',
+            [$email],
+            [
+                'order_code' => $orderCode,
+            ],
+            []
+        );
     }
 }

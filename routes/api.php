@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\CheckoutController;
 use App\Http\Controllers\Api\DocumentController;
 use App\Http\Controllers\Api\DocumentFieldController;
 use App\Http\Controllers\Api\DocumentTypeController;
+use App\Http\Controllers\Api\DownloadController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\UpgradeController;
 use Illuminate\Support\Facades\Route;
@@ -39,15 +40,15 @@ Route::middleware("api")->group(function () {
             Route::get('callback', 'authGoogleCallback')->name('auth.google.callback');
         });
     });
-
-    Route::prefix("document")->group(function () {
-        Route::get("/types", [DocumentTypeController::class, 'index']);
-        Route::get("/fields", [DocumentFieldController::class, 'index']);
-        Route::controller(DocumentController::class)->group(function () {
-            Route::get("/", "index");
+    Route::prefix('/')->middleware("auth:api")->group(function () {
+        Route::prefix("document")->group(function () {
+            Route::get("/types", [DocumentTypeController::class, 'index']);
+            Route::get("/fields", [DocumentFieldController::class, 'index']);
+            Route::controller(DocumentController::class)->group(function () {
+                Route::get("/", "index");
+                Route::get("/{id}", "show");
+            });
         });
-    });
-    Route::middleware("auth:api")->group(function () {
         Route::prefix("cart")->controller(CartController::class)->group(function () {
             Route::get("/", "index");
             Route::post("/", "add");
@@ -62,8 +63,15 @@ Route::middleware("api")->group(function () {
         Route::post("checkout", [CheckoutController::class, "checkout"]);
 
         Route::prefix("order")->controller(OrderController::class)->group(function () {
+            Route::get("/list", "index");
             Route::get("/{orderCode}", "show");
             Route::get("/{orderCode}/status/payment", "paymentStatus");
         });
+
+        Route::prefix("download")->controller(DownloadController::class)->group(function () {
+            Route::get("{code}/{orderCode}", "downloadDocument");
+        });
+
+        Route::get('profile', [AuthController::class, 'profile']);
     });
 });

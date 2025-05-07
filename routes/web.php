@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UpgradeController;
 use App\Http\Controllers\Admin\VnpayController;
 use App\Http\Controllers\Web\AuthController;
@@ -35,6 +36,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get("", [DashboardController::class, 'index'])->name('dashboard');
     Route::prefix("documents")->controller(DocumentController::class)->group(function () {
         Route::get("/", "index")->name("document.index");
+        Route::get("/{id}", "show")->name("document.show");
     });
 
     Route::get("/cart", [CartController::class, 'index'])->name("admin.cart.index");
@@ -46,6 +48,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::prefix("payment")->controller(VnpayController::class)->group(function () {
         Route::get("return", "return")->name("vnpay.return");
         Route::get("{orderCode}", "result")->name("vnpay.result");
+    });
+
+    Route::prefix("orders")->controller(OrderController::class)->group(function () {
+        Route::get("", "list")->name("orders.index");
+        Route::get("{orderCode}", "show")->name("orders.show");
     });
 });
 

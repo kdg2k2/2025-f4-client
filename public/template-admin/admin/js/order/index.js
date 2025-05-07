@@ -1,56 +1,80 @@
 const orders = {
     elements: {
-        datatable: $('#datatable'),
+        datatable: $("#datatable"),
     },
-    update: function () {
+    update: function (param = {}) {
         destroyDataTable(this.elements.datatable);
-        const listUrl = 'api/orders'
+        const listUrl = "api/order/list";
+        const status = {
+            pending: {
+                text: "Chờ xác nhận",
+                class: "badge badge-warning",
+            },
+            paid: {
+                text: "Đã thanh toán",
+                class: "badge badge-success",
+            },
+            cancelled: {
+                text: "Đã hủy",
+                class: "badge badge-danger",
+            },
+            completed: {
+                text: "Hoàn thành",
+                class: "badge badge-info",
+            },
+            complete: {
+                text: "Hoàn thành",
+                class: "badge badge-info",
+            },
+        };
         const dataTable = createDataTableServerSide(
             this.elements.datatable,
             listUrl,
             [
                 {
-                    data: "name",
-                    title: "Tên tài liệu",
+                    data: "index",
+                    title: "STT",
                 },
                 {
-                    data: "type",
-                    title: "Loại tài liệu",
+                    data: "info",
+                    title: "Thông tin",
                 },
                 {
-                    data: "issued_date",
-                    title: "Ngày ban hành",
+                    data: "created_at",
+                    title: "Ngày tạo",
                 },
                 {
-                    data: "author",
-                    title: "Tác giả",
-                },
-                {
-                    data: "price",
-                    title: "Giá",
-                },
-                {
-                    data: "uploader",
-                    title: "Người tải lên",
+                    data: "status",
+                    title: "Trạng thái",
                 },
                 {
                     data: "actions",
                     title: "Hành động",
                 },
             ],
-            (item) => ({
-                name: item.name ?? "",
-                type: item.type?.name ?? "",
-                issued_date: item.issued_date
-                    ? formatDateTime(item.issued_date)
-                    : "",
-                author: item.author ?? "",
-                price: formatNumber(item.price) ?? "",
-                uploader: item.uploader?.name ?? "",
-                actions: ``,
-            }),
+            (item, i) => {
+                return {
+                    index: i + 1,
+                    info: `<a href="">${item.order_code}</a><br> ${item.user.name} <br> ${item.user.email}`,
+                    created_at: format(item.created_at),
+                    status: `<div class="text-center">
+                                <span class="${status[item.status]?.class}">
+                                ${status[item.status]?.text}
+                            </span></div>`,
+                    actions: `
+                        <div class="text-center">
+                            <a href="/admin/orders/${item.order_code}" title="Xem" class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>
+                        </div>`,
+                };
+            },
             param
         );
     },
-    init: function () {},
+    init: function () {
+        this.update({ paginate: 1 });
+    },
 };
+
+$(document).ready(function () {
+    orders.init();
+});

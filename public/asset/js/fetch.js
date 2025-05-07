@@ -160,7 +160,6 @@ const apiRequest = async (
                 });
             });
         }
-
         throw err;
     }
 };

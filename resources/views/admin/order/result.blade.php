@@ -63,7 +63,7 @@
                                                 <tbody>
                                                     <tr
                                                         style="display:flex; justify-content: space-between; margin:28px 0;align-items: center;">
-                                                        <td>
+                                                        <td class="summary">
                                                         </td>
                                                         <td>
                                                             <span
@@ -88,7 +88,7 @@
                                         <td>
                                             <span style="display: flex; justify-content: end; gap: 15px;">
                                                 <a style="background: rgba(48, 142, 135, 1); color:rgba(255, 255, 255, 1);border-radius: 10px;padding: 12px 27px;font-weight: 600;outline: 0;border: 0; text-decoration: none;"
-                                                    href="/admin/orders">
+                                                    href="/admin/orders/{{ $orderCode}}">
                                                     Xem đơn hàng
                                                 </a>
                                             </span>

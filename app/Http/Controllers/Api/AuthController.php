@@ -88,4 +88,13 @@ class AuthController extends Controller
             ], 200);
         });
     }
+
+    public function profile(Request $request)
+    {
+        return $this->catchAPI(function () use ($request) {
+            return response()->json([
+                'data' => auth('api')->user(),
+            ], 200);
+        });
+    }
 }

@@ -14,4 +14,14 @@ class DocumentRepository
             ->with("type.field")
             ->orderByDesc("id")->get()->toArray();
     }
+
+    public function getById($id)
+    {
+        return Document::with("type.field")->findOrFail($id);
+    }
+
+    public function incrementDownloadCount($id)
+    {
+        return Document::where("id", $id)->increment("download_count");
+    }
 }

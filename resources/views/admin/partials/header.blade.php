@@ -109,11 +109,3 @@
         </div>
     </div>
 </header>
-<script>
-    const userRecord = JSON.parse(localStorage.getItem('user'));
-    document.getElementById('user-name').innerHTML = userRecord.name;
-    document.getElementById('user-role').innerHTML = userRecord.name;
-    document.getElementById('user-img').setAttribute('src', userRecord.path);
-    console.log(document.getElementById('user-img').attributes.src);
-    
-</script>

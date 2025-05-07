@@ -22,4 +22,13 @@ class DocumentController extends Controller
             ], 200);
         });
     }
+
+    public function show($id) {
+        return $this->catchAPI(function () use ($id) {
+            $res = $this->documentService->view($id);
+            return response()->json([
+                'data' => $res
+            ], 200);
+        });
+    }
 }

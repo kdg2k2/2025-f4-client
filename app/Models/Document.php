@@ -11,12 +11,18 @@ class Document extends Model
     protected $guarded = [];
 
     protected $hidden = [
-        'file_path',
+        'path',
     ];
 
     // type document
     public function type()
     {
         return $this->belongsTo(DocumentType::class, 'type_id');
+    }
+
+    // document download
+    public function downloads()
+    {
+        return $this->hasMany(DocumentDownload::class, 'document_id');
     }
 }

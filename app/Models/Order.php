@@ -10,6 +10,13 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
 
+    protected const StatusText = [
+        'pending' => 'Chờ thanh toán',
+        'paid' => 'Đã thanh toán',
+        'cancelled' => 'Đã hủy',
+        'completed' => 'Hoàn thành',
+    ];
+
     public function packageItems()
     {
         return $this->hasMany(OrderPackageItem::class, 'order_id');
@@ -25,5 +32,8 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+    public function downloadItems() {
+        return $this->hasMany(DocumentDownload::class, 'order_id');
     }
 }

@@ -18,4 +18,11 @@ class OrderDocumentItemService extends BaseService
             return $this->orderDocumentItemRepository->createMany($req);
         });
     }
+
+    public function getItemsPriceThanZero($idOrder)
+    {
+        return $this->tryThrow(function () use ($idOrder) {
+            return $this->orderDocumentItemRepository->getItemsPriceThanZero($idOrder);
+        });
+    }
 }

@@ -35,6 +35,9 @@ class UpgradeService extends BaseService
                 'order_code' => $orderCode,
                 'status' => 'pending',
                 'total_amount' => $packageItem->price,
+                'subtotal' => $packageItem->price,
+                'discount' => 0,
+                'type' => 'package',
             ]);
             $this->opiService->create([
                 'order_id' => $order->id,

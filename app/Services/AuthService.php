@@ -14,12 +14,16 @@ class AuthService extends BaseService
 {
     protected $userService;
     protected $cartService;
+    protected $puService;
+    protected $pService;
     protected $customValidateService;
     public function __construct()
     {
         $this->userService = app(UserService::class);
         $this->customValidateService = app(CustomValidateRequestService::class);
         $this->cartService = app(CartService::class);
+        $this->puService = app(PackageUserService::class);
+        $this->pService = app(PackageService::class);
     }
 
     public function login(array $request)
@@ -137,6 +141,17 @@ class AuthService extends BaseService
         }
         if (!$existingUser['cart'])
             $this->cartService->createCart($existingUser['id']);
+        if (count($existingUser['packages']) === 0) {
+            $p = $this->pService->getById(1);
+            $this->puService->create([
+                'user_id' => $existingUser['id'],
+                'downloads_remaining' => $p['download_document_limit'],
+                'package_id' => $p['id'],
+                'start_date' => date('Y-m-d H:i:s'),
+                'end_date' => date('Y-m-d H:i:s', strtotime('+' . $p['duration_days'] . ' days')),
+            ]);
+        }
+
         return $this->createTokenWithUserRecord($existingUser);
     }
 
@@ -159,6 +174,14 @@ class AuthService extends BaseService
                 $request['path'] = null;
             $user = $this->userService->store($request);
             $this->cartService->createCart($user['id']);
+            $p = $this->pService->getById(1);
+            $this->puService->create([
+                'user_id' => $user['id'],
+                'downloads_remaining' => $p['download_document_limit'],
+                'package_id' => $p['id'],
+                'start_date' => Carbon::now(),
+                'end_date' => Carbon::now()->addDays($p['duration_days']),
+            ]);
             return $user;
         });
     }

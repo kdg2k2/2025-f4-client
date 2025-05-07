@@ -29,4 +29,11 @@ class PackageUserService extends BaseService
             return $count;
         });
     }
+
+    public function decrease($idUser, $value)
+    {
+        return $this->tryThrow(function () use ($idUser, $value) {
+            return $this->packageUserRepository->decrease($idUser, $value);
+        });
+    }
 }

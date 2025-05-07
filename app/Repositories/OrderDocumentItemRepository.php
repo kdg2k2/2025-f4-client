@@ -11,4 +11,11 @@ class OrderDocumentItemRepository
     {
         return OrderDocumentItem::insert($req);
     }
+
+    public function getItemsPriceThanZero($idOrder)
+    {
+        return OrderDocumentItem::where('order_id', $idOrder)
+            ->where('price', '>', 0)
+            ->get();
+    }
 }

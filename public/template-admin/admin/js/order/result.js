@@ -33,6 +33,7 @@ const pageCheckoutOrder = {
         info: $(".info-checkout"),
         checkoutTable: $(".checkout-table"),
         checkoutTotal: $(".checkout-total"),
+        summary: $(".summary"),
         status: $(".status"),
     },
     getStatus: function () {
@@ -90,17 +91,32 @@ const pageCheckoutOrder = {
         }
         if (document_items && document_items.length > 0) {
             document_items.forEach((item) => {
-                console.log(item);
                 this.elements.checkoutTable.append(
                     htmlItem({
                         name: item.document.title,
-                        price: item.document.price,
+                        price: item.price,
                     })
                 );
             });
         }
         this.elements.checkoutTotal.html(
             `${formatNumber(data.total_amount)}<sup>đ</sup>`
+        );
+        this.elements.summary.html(
+            `<p>
+                <span>Tổng phụ:</span>
+                <span style="font-weight: 700;">
+                    ${formatNumber(data.subtotal)}<sup>đ</sup>
+                </span>
+            </p>
+            <p>
+                <span>Giảm giá:</span>
+                <span style="color:#fc006d; font-weight: 700;">
+                    ${data.discount > 0 ? "-" : ""}${formatNumber(
+                data.discount
+            )}<sup>đ</sup>
+                </span>
+            </p>`
         );
     },
 
