@@ -7,7 +7,7 @@ const checkout = {
             try {
                 e.preventDefault();
                 const form = new FormData(this);
-                if (!form.get("cart_ids[]")) return;
+                if (!form.get("cart_document_ids[]")) return;
                 const { data } = await checkout.checkout(form);
                 location.href = data;
             } catch (error) {

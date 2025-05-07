@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CartController;
+use App\Http\Controllers\Api\CheckoutController;
 use App\Http\Controllers\Api\DocumentController;
 use App\Http\Controllers\Api\DocumentFieldController;
 use App\Http\Controllers\Api\DocumentTypeController;
@@ -58,13 +59,11 @@ Route::middleware("api")->group(function () {
             Route::post("/payment", "payment");
         });
 
-        Route::get("/checkout", [OrderController::class, 'checkout']);
-        Route::get("/checkout/return", [OrderController::class, 'return'])->name('checkout.return');
+        Route::post("checkout", [CheckoutController::class, "checkout"]);
 
         Route::prefix("order")->controller(OrderController::class)->group(function () {
             Route::get("/{orderCode}", "show");
             Route::get("/{orderCode}/status/payment", "paymentStatus");
         });
     });
-
 });

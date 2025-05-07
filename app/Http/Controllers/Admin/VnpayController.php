@@ -28,8 +28,7 @@ class VnpayController extends Controller
     }
     public function ipn(Request $request)
     {
-        $idUser = auth('api')->user()->id;
-        $res = $this->vnpayService->vnpayIpn($idUser, $request->all());
+        $res = $this->vnpayService->vnpayIpn($request->all());
         return response()->json([
             'RspCode' => $res['RspCode'],
             'Message' => $res['Message'],

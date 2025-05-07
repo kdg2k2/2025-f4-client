@@ -34,4 +34,19 @@ class CartDocumentService extends BaseService
             return $item;
         });
     }
+
+    public function getCartDocument(array $ids)
+    {
+        return $this->tryThrow(function () use ($ids): mixed {
+            $item = $this->cartDocumentItemRepository->getCartInIds($ids);
+            return $item;
+        });
+    }
+
+    public function deleteCartDocument(array $ids)
+    {
+        return $this->tryThrow(function () use ($ids): mixed {
+            return $this->cartDocumentItemRepository->deleteCartInIds($ids);
+        });
+    }
 }

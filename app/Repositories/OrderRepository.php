@@ -14,7 +14,7 @@ class OrderRepository
     public function getOrderByCode($code)
     {
         return Order::where('order_code', $code)
-            ->with(['packageItems.package', 'payment', 'user'])
+            ->with(['packageItems.package', 'payment', 'user', 'documentItems.document'])
             ->first();
     }
 

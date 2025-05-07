@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Cart\CheckoutRequest;
 use App\Services\OrderService;
 use Illuminate\Http\Request;
 
@@ -31,17 +32,6 @@ class OrderController extends Controller
             return response()->json([
                 'data' => $status
             ], 200);
-        });
-    }
-
-    public function checkout(Request $request)
-    {
-        return $this->catchAPI(function () use ($request) {
-            $idUser = auth()->user()->id;
-            // $order = $this->orderService->checkout($idUser, $request->all());
-            // return response()->json([
-            //     'data' => $order
-            // ], 200);
         });
     }
 }

@@ -14,6 +14,10 @@ class Order extends Model
     {
         return $this->hasMany(OrderPackageItem::class, 'order_id');
     }
+    public function documentItems()
+    {
+        return $this->hasMany(OrderDocumentItem::class, 'order_id');
+    }
     public function payment()
     {
         return $this->hasOne(Payment::class, 'order_id');

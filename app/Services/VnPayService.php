@@ -108,9 +108,9 @@ class VnPayService extends BaseService
     }
 
 
-    public function vnpayIpn(int $idUser, array $request)
+    public function vnpayIpn(array $request)
     {
-        return $this->tryThrow(function () use ($request, $idUser) {
+        return $this->tryThrow(function () use ($request) {
             $ipClient = $this->getClientIp();
             if (!$this->isAllowedVnpayIp($ipClient)) {
                 $request['vnp_ResponseCode'] = '99';
@@ -177,11 +177,11 @@ class VnPayService extends BaseService
                         throw new Exception('Order package item not found');
 
                     $this->handleAfterPaySuccess([
-                        'user_id' => $idUser,
+                        'user_id' => $payment->order->user_id,
                         'package_id' => $item->package_id,
                         'downloads_remaining' => $item->package->download_document_limit,
                         'start_date' => $this->getCurrentTime(),
-                        'end_date' => date('Y-m-d H:i:s', strtotime($this->getCurrentTime() . '+' . $item->package->duration . ' days')),
+                        'end_date' => date('Y-m-d', strtotime($this->getCurrentTime() . '+' . $item->package->duration_days . ' days')),
                     ], $request['vnp_TxnRef']);
                 }
             }

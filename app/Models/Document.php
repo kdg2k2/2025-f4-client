@@ -10,6 +10,10 @@ class Document extends Model
     use HasFactory;
     protected $guarded = [];
 
+    protected $hidden = [
+        'file_path',
+    ];
+
     // type document
     public function type()
     {

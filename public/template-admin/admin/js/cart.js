@@ -69,7 +69,7 @@ const cartModule = {
                                     ${checked}
                                     type="checkbox"
                                     value="${item.id}"
-                                    name="cart_ids[]"
+                                    name="cart_document_ids[]"
                                     class="form-check-input m-0"
                                 />
                                 <div class="px-3 text-success d-flex align-items-center"><i style="font-size: 20px;" class="fa-regular fa-file"></i></div>
@@ -141,7 +141,7 @@ const cartModule = {
             });
             if (isChecked) {
                 this.selects = form
-                    .find('input[name="cart_ids[]"]:checked')
+                    .find('input[name="cart_document_ids[]"]:checked')
                     .map(function () {
                         return $(this).val();
                     })
@@ -152,12 +152,12 @@ const cartModule = {
             this.update();
         });
 
-        this.element.cartItems.on("click", 'input[name="cart_ids[]"]', (e) => {
+        this.element.cartItems.on("click", 'input[name="cart_document_ids[]"]', (e) => {
             e.stopPropagation(); // 👈 THÊM DÒNG NÀY
             const form = $(e.currentTarget).closest("form");
             const allChecked =
-                form.find('input[name="cart_ids[]"]').length ===
-                form.find('input[name="cart_ids[]"]:checked').length;
+                form.find('input[name="cart_document_ids[]"]').length ===
+                form.find('input[name="cart_document_ids[]"]:checked').length;
             this.element.checkAll.prop("checked", allChecked);
             const id = $(e.currentTarget).val();
             if ($(e.currentTarget).is(":checked")) {

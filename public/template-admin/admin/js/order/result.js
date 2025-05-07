@@ -1,3 +1,32 @@
+const htmlItem = ({ name, duration_days, download_document_limit, price }) => {
+    return /* html */ `
+        <tr>
+            <td style="padding: 18px 15px 18px 0; display:flex; align-items: center; gap: 10px; border-bottom:1px solid #52526C4D;">
+                <ul style="padding: 0; margin: 0; list-style: none;">
+                    <li>
+                        <h4 style="font-weight:600; margin:4px 0px; font-size: 16px; color: #308e87;">
+                            ${name}
+                        </h4>
+                        ${
+                            duration_days && download_document_limit
+                                ? `<span style=" opacity: 0.8; font-size: 16px;">
+                                ${duration_days} ngày | ${download_document_limit} lượt tải
+                                </span>`
+                                : ""
+                        }
+                    </li>
+                </ul>
+            </td>
+            <td style="padding: 18px 15px; width: 12%; text-align: center; border-bottom:1px solid #52526C4D;">
+                <span style=" opacity: 0.8;">
+                    ${formatNumber(price)}
+                    <sup>đ</sup>
+                </span>
+            </td>
+        </tr>
+        `;
+};
+
 const pageCheckoutOrder = {
     elements: {
         orderCode: $(".order-code"),
@@ -16,7 +45,7 @@ const pageCheckoutOrder = {
     },
     update: async function () {
         const { data } = await this.getData();
-        const { user, package_items } = data;
+        const { user, package_items, document_items } = data;
         this.elements.orderCode.html(`#${data.order_code}`);
         this.elements.info.html(/* html */ `
                                 <td>
@@ -46,33 +75,30 @@ const pageCheckoutOrder = {
                                     </p>
                                 </td>
                                 <td></td>`);
-        package_items.forEach((item) => {
-            this.elements.checkoutTable.append(/* html */ `
-                <tr>
-                    <td
-                        style="padding: 18px 15px 18px 0; display:flex; align-items: center; gap: 10px; border-bottom:1px solid #52526C4D;">
-                        <ul style="padding: 0; margin: 0; list-style: none;">
-                            <li>
-                                <h4 style="font-weight:600; margin:4px 0px; font-size: 16px; color: #308e87;">
-                                    ${item.package.name}
-                                </h4>
-                                <span style=" opacity: 0.8; font-size: 16px;">
-                                    ${item.package.duration_days} ngày | ${
-                item.package.download_document_limit
-            } lượt tải
-                                </span>
-                            </li>
-                        </ul>
-                    </td>
-                    <td
-                        style="padding: 18px 15px; width: 12%; text-align: center; border-bottom:1px solid #52526C4D;">
-                        <span style=" opacity: 0.8;">
-                            ${formatNumber(item.price)}<sup>đ</sup>
-                        </span>
-                    </td>
-                </tr>
-            `);
-        });
+        if (package_items && package_items.length > 0) {
+            package_items.forEach((item) => {
+                this.elements.checkoutTable.append(
+                    htmlItem({
+                        name: item.package.name,
+                        duration_days: item.package.duration_days,
+                        download_document_limit:
+                            item.package.download_document_limit,
+                        price: item.package.price,
+                    })
+                );
+            });
+        }
+        if (document_items && document_items.length > 0) {
+            document_items.forEach((item) => {
+                console.log(item);
+                this.elements.checkoutTable.append(
+                    htmlItem({
+                        name: item.document.title,
+                        price: item.document.price,
+                    })
+                );
+            });
+        }
         this.elements.checkoutTotal.html(
             `${formatNumber(data.total_amount)}<sup>đ</sup>`
         );

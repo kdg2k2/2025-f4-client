@@ -18,4 +18,15 @@ class PackageUserService extends BaseService
             return $this->packageUserRepository->create($request);
         });
     }
+
+    public function countUsed($idUser)
+    {
+        return $this->tryThrow(function () use ($idUser) {
+            $data = $this->packageUserRepository->listActive($idUser);
+            $count = array_reduce($data->toArray(), function ($carry, $item) {
+                return $carry + $item['downloads_remaining'];
+            }, 0);
+            return $count;
+        });
+    }
 }
