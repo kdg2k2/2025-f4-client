@@ -2,7 +2,7 @@
 <html lang="vi" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-hover" data-theme-mode="light">
 
 <head>
-    <base href="{{ asset('')}}">
+    <base href="{{ asset('') }}">
     <meta name="_token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
@@ -80,7 +80,8 @@
                                     </form>
                                     <div class="d-grid mb-3">
                                         <button id="btnGoogleLogin" type="button" class="btn btn-white border"><img
-                                                src="assets/images/png/45.png" class="me-2" alt="img" width="20">Đăng
+                                                src="assets/images/png/45.png" class="me-2" alt="img"
+                                                width="20">Đăng
                                             nhập với Google
                                         </button>
                                     </div>
@@ -111,17 +112,18 @@
         }
 
         const loginForm = document.querySelector('form.theme-form');
-        loginForm.addEventListener('submit', function (e) {
+        loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.email.value;
             const password = this.password.value;
             const csrf = this._token.value;
 
             apiRequest('post', '/api/auth/login', {
-                email,
-                password
-            }, csrf)
+                    email,
+                    password
+                }, csrf)
                 .then(data => {
+                    localStorage.setItem('user', JSON.stringify(data.user))
                     redirect();
                 })
                 .catch(err => {
@@ -129,14 +131,15 @@
                 });
         });
 
-        window.addEventListener('message', function (evt) {
+        window.addEventListener('message', function(evt) {
             if (evt.origin !== window.location.origin) return;
-            if (evt.data.access_token) {
+            if (evt.data.user)
+                localStorage.setItem('user', JSON.stringify(evt.data.user))
+            if (evt.data.access_token)
                 redirect();
-            }
         }, false);
 
-        document.getElementById('btnGoogleLogin').addEventListener('click', function () {
+        document.getElementById('btnGoogleLogin').addEventListener('click', function() {
             const url = '/api/auth/google/redirect';
             const w = 500,
                 h = 600;
