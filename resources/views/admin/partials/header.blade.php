@@ -1,7 +1,7 @@
 <header class="page-header row" id="top_header">
     <div class="logo-wrapper d-flex align-items-center col-auto">
         <a href="/">
-            <img style="height: 40px; border-radius: 50%;" class="img-fluid" src="asset/images/F4.jpg" alt="logo" />
+            <img style="height: 40px;" class="img-fluid" src="{{ config('app.logo-white') }}" alt="logo" />
             <a class="close-btn toggle-sidebar" href="javascript:void(0)">
                 <svg class="svg-color">
                     <use href="template-admin/admin/svg/iconly-sprite.svg#Category"></use>
@@ -39,7 +39,8 @@
                     <form class="body-cart form-checkout">
                         <div class="cart-header">
                             <div class="d-flex align-items-center">
-                                <input title="Chọn tất cả" type="checkbox" class="check-all form-check-input m-0 me-1" />
+                                <input title="Chọn tất cả" type="checkbox"
+                                    class="check-all form-check-input m-0 me-1" />
                                 <h5 class="mb-0">Giỏ hàng</h5>
                             </div>
                             <a class="text-info" href="/admin/cart">Xem giỏ hàng</a>
@@ -61,7 +62,7 @@
                 </li>
                 <li class="profile-nav custom-dropdown">
                     <div class="user-wrap">
-                        <div class="user-img"><img src="template-admin/admin/images/profile.png" alt="user" /></div>
+                        <div class="user-img"><img id="user-img" src="template-admin/admin/images/profile.png" alt="user" /></div>
                         <div class="user-content">
                             <h6 id="user-name">
                                 User Name
@@ -78,7 +79,7 @@
                                 <svg class="svg-color">
                                     <use href="template-admin/admin/svg/iconly-sprite.svg#Tick-square"></use>
                                 </svg>
-                                <a class="ms-2" href="{{route('admin.upgrate.index')}}">Nâng cấp</a>
+                                <a class="ms-2" href="{{ route('admin.upgrate.index') }}">Nâng cấp</a>
                             </li>
                             <li class="d-flex">
                                 <svg class="svg-color">
@@ -93,11 +94,12 @@
                                 <a class="ms-2" href="#">Đổi mật khẩu</a>
                             </li>
                             <li>
-                                <a href="#" class="d-flex" data-href="{{ route('auth.logout') }}" data-bs-toggle="modal" data-bs-target="#confirm-logout">
+                                <a href="#" class="d-flex" data-href="{{ route('auth.logout') }}"
+                                    data-bs-toggle="modal" data-bs-target="#confirm-logout">
                                     <svg class="svg-color">
                                         <use href="template-admin/admin/svg/iconly-sprite.svg#Login"></use>
                                     </svg>
-                                    <span class="ms-2" href="" >Thoát</span>
+                                    <span class="ms-2" href="">Thoát</span>
                                 </a>
                             </li>
                         </ul>
@@ -107,3 +109,11 @@
         </div>
     </div>
 </header>
+<script>
+    const userRecord = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('user-name').innerHTML = userRecord.name;
+    document.getElementById('user-role').innerHTML = userRecord.name;
+    document.getElementById('user-img').setAttribute('src', userRecord.path);
+    console.log(document.getElementById('user-img').attributes.src);
+    
+</script>

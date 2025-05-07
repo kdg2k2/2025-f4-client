@@ -116,7 +116,7 @@ const apiRequest = async (
     try {
         return await makeHttpRequest(method, url, params, csrfToken, isLoading);
     } catch (err) {
-        if (err.status === 401) {
+        if (url != "/api/auth/login" && err.status === 401) {
             if (!isRefreshing) {
                 isRefreshing = true;
                 refreshPromise = makeHttpRequest(

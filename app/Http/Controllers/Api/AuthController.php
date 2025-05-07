@@ -69,8 +69,9 @@ class AuthController extends Controller
                 return response()->json($data, 200);
 
             $isLocal = $this->isLocal();
-            return response()->view('admin.auth.google_callback', [
-                'access' => $data['access_token'],
+            return response()->view('pages.auth.google_callback', [
+                'access_token' => $data['access_token'],
+                'user' => $data['user'],
             ])->cookie('access_token', $data['access_token'], $data['access_token_expires_in'], '/', null, !$isLocal, true, false, 'Strict')
                 ->cookie('refresh_token', $data['refresh_token'], $data['refresh_token_expires_in'], '/', null, !$isLocal, true, false, 'Strict');
         } catch (\Exception $e) {

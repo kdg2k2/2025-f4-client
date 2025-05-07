@@ -18277,8 +18277,8 @@ body.modal-open .select2-container--open .select2-dropdown {
     height: 38px;
     border: 1px solid var(--shape-border);
     border-radius: 50%;
-    background-color: var(--theme-secondary);
-    padding: 3px 3px 0px 3px;
+    /* background-color: var(--theme-secondary); */
+    /* padding: 3px 3px 0px 3px; */
 }
 
 @media (max-width: 767.98px) {

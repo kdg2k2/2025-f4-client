@@ -184,5 +184,9 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
-
+    
+    'logo' => env('APP_LOGO'),
+    'logo-white' => env('APP_LOGO_WHITE'),
+    'default-avatar' => env('DEFAULT_AVATAR'),
+    'default-password' => env('DEFAULT_PASSWORD'),
 ];

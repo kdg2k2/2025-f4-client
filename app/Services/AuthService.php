@@ -100,7 +100,7 @@ class AuthService extends BaseService
     {
         return 'https://accounts.google.com/o/oauth2/v2/auth?' . http_build_query([
             'client_id' => env('GOOGLE_CLIENT_ID'),
-            'redirect_uri' => env('GOOGLE_REDIRECT_URL'),
+            'redirect_uri' => env(key: 'GOOGLE_REDIRECT_URL'),
             'response_type' => 'code',
             'scope' => 'email profile',
             'state' => Str::random(40),
