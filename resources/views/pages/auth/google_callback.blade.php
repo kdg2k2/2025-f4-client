@@ -8,9 +8,10 @@
 <body>
     <script>
         const payload = {
-            access_token: @json($access),
+            access_token: @json($access_token),
+            user: @json($user),
         };
-        const callbackUrl = @json('auth.google.callback');
+        const callbackUrl = @json(route('auth.google.callback'));
         console.log(callbackUrl);
         console.log(window.opener);
         if (window.opener) {

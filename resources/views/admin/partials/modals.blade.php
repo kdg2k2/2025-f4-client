@@ -91,6 +91,7 @@
             evt.preventDefault();
             apiRequest('post', $(e.relatedTarget).data('href'), {})
                 .then(data => {
+                    localStorage.removeItem('user');
                     window.location.href = '/';
                 })
                 .catch(err => {
