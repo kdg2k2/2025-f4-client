@@ -40,7 +40,6 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \App\Http\Middleware\EncryptCookies::class,
             \App\Http\Middleware\InjectJwtFromCookie::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api',

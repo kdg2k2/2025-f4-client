@@ -42,4 +42,12 @@ class CartService extends BaseService
             return $cart;
         });
     }
+
+    public function createCart(int $idUser)
+    {
+        return $this->tryThrow(function () use ($idUser) {
+            $cart = $this->cartRepository->create($idUser);
+            return $cart;
+        });
+    }
 }

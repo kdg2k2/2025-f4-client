@@ -5,6 +5,7 @@ namespace App\Services;
 use Carbon\Carbon;
 use Exception;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Token;
@@ -31,7 +32,7 @@ class AuthService extends BaseService
         });
     }
 
-    public function refresh(array $request)
+    public function refreshToken(array $request)
     {
         return $this->tryThrow(function () use ($request) {
             $refreshToken = $request['refresh_token'];
@@ -124,7 +125,6 @@ class AuthService extends BaseService
             'headers' => ['Authorization' => 'Bearer ' . $data['access_token']]
         ]);
         $googleUser = json_decode($googleUser->getBody()->getContents(), true);
-
         $existingUser = $this->userService->findByEmail($googleUser['email']);
         if (empty($existingUser)) {
             $userInfo = [
@@ -135,7 +135,8 @@ class AuthService extends BaseService
             $existingUser = $this->newUserGoogle($userInfo);
             $existingUser = $this->userService->findById($existingUser['id']);
         }
-        $this->cartService->createCart($existingUser['id']);
+        if (!$existingUser['cart'])
+            $this->cartService->createCart($existingUser['id']);
         return $this->createTokenWithUserRecord($existingUser);
     }
 

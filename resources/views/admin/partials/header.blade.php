@@ -78,7 +78,7 @@
                                 <svg class="svg-color">
                                     <use href="template-admin/admin/svg/iconly-sprite.svg#Tick-square"></use>
                                 </svg>
-                                <a class="ms-2" href="">Nâng cấp</a>
+                                <a class="ms-2" href="{{route('admin.upgrate.index')}}">Nâng cấp</a>
                             </li>
                             <li class="d-flex">
                                 <svg class="svg-color">

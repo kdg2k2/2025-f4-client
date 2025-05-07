@@ -30,7 +30,7 @@ class AuthController extends Controller
     {
         return $this->catchAPI(function () use ($request) {
             $data = $request->validated();
-            $res = $this->authService->refresh($data);
+            $res = $this->authService->refreshToken($data);
             return $this->setCookie($res);
         });
     }

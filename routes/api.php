@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\DocumentController;
 use App\Http\Controllers\Api\DocumentFieldController;
 use App\Http\Controllers\Api\DocumentTypeController;
+use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\UpgradeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,7 +51,19 @@ Route::middleware("api")->group(function () {
             Route::get("/", "index");
             Route::post("/", "add");
             Route::delete("/", "remove");
-            // Route::post("/clear", "clear")->middleware("auth:api")->name("cart.clear");
+        });
+
+        Route::prefix("upgrade")->controller(UpgradeController::class)->group(function () {
+            Route::get("/", "index");
+            Route::post("/payment", "payment");
+        });
+
+        Route::get("/checkout", [OrderController::class, 'checkout']);
+        Route::get("/checkout/return", [OrderController::class, 'return'])->name('checkout.return');
+
+        Route::prefix("order")->controller(OrderController::class)->group(function () {
+            Route::get("/{orderCode}", "show");
+            Route::get("/{orderCode}/status/payment", "paymentStatus");
         });
     });
 

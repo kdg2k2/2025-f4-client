@@ -10,7 +10,13 @@ const unloadHandler = () => {
 };
 window.addEventListener("unload", unloadHandler);
 
-const makeHttpRequest = (method = "get", url, params = {}, csrfToken = "") => {
+const makeHttpRequest = (
+    method = "get",
+    url,
+    params = {},
+    csrfToken = "",
+    isLoading = true
+) => {
     return new Promise((resolve, reject) => {
         method = method.toLowerCase();
         if (!["get", "post"].includes(method)) {
@@ -20,7 +26,7 @@ const makeHttpRequest = (method = "get", url, params = {}, csrfToken = "") => {
         controller = new AbortController();
         const { signal } = controller;
 
-        showLoading();
+        if (isLoading) showLoading();
 
         const fetchOptions = {
             method: method.toUpperCase(),
@@ -100,9 +106,15 @@ const makeHttpRequest = (method = "get", url, params = {}, csrfToken = "") => {
     });
 };
 
-const apiRequest = async (method, url, params = {}, csrfToken = "") => {
+const apiRequest = async (
+    method,
+    url,
+    params = {},
+    csrfToken = "",
+    isLoading
+) => {
     try {
-        return await makeHttpRequest(method, url, params, csrfToken);
+        return await makeHttpRequest(method, url, params, csrfToken, isLoading);
     } catch (err) {
         if (err.status === 401) {
             if (!isRefreshing) {
@@ -111,7 +123,8 @@ const apiRequest = async (method, url, params = {}, csrfToken = "") => {
                     "post",
                     "/api/auth/refresh",
                     {},
-                    csrfToken
+                    csrfToken,
+                    false
                 )
                     .then(() => {
                         isRefreshing = false;
@@ -153,35 +166,35 @@ const apiRequest = async (method, url, params = {}, csrfToken = "") => {
 };
 
 class HttpIntant {
-    async get(url, data, csrfToken) {
-        return apiRequest("GET", url, data, csrfToken);
+    async get(url, data, csrfToken, isLoading) {
+        return apiRequest("GET", url, data, csrfToken, isLoading);
     }
-    async post(url, data, csrfToken) {
-        return apiRequest("POST", url, data, csrfToken);
+    async post(url, data, csrfToken, isLoading) {
+        return apiRequest("POST", url, data, csrfToken, isLoading);
     }
-    async put(url, data, csrfToken) {
+    async put(url, data, csrfToken, isLoading) {
         if (data instanceof FormData) {
             data.append("_method", "PUT");
         } else {
             data = { ...data, _method: "PUT" };
         }
-        return apiRequest("POST", url, data, csrfToken);
+        return apiRequest("POST", url, data, csrfToken, isLoading);
     }
-    async delete(url, data, csrfToken) {
+    async delete(url, data, csrfToken, isLoading) {
         if (data instanceof FormData) {
             data.append("_method", "DELETE");
         } else {
             data = { ...data, _method: "DELETE" };
         }
-        return apiRequest("POST", url, data, csrfToken);
+        return apiRequest("POST", url, data, csrfToken, isLoading);
     }
-    async patch(url, data, csrfToken) {
+    async patch(url, data, csrfToken, isLoading) {
         if (data instanceof FormData) {
             data.append("_method", "PATCH");
         } else {
             data = { ...data, _method: "PATCH" };
         }
-        return apiRequest("POST", url, data, csrfToken);
+        return apiRequest("POST", url, data, csrfToken, isLoading);
     }
 }
 const http = new HttpIntant();

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDocumentItem extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

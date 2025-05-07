@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\UpgradeController;
+use App\Http\Controllers\Admin\VnpayController;
 use App\Http\Controllers\Web\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\HomeController;
@@ -15,8 +18,6 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/document/index', 'getDocumentDetail');
     Route::get('/maps', 'getMaps');
     Route::get('/maps/index', 'getMapsDetail');
-    Route::get('register', 'getRegister')->name("register");
-    Route::get('login', 'getLogin')->name("login");
 });
 
 Route::controller(AuthController::class)->group(function () {
@@ -36,20 +37,18 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get("/", "index")->name("document.index");
     });
 
-    // Route::prefix('checkout')->controller(CheckoutController::class)->group(function () {
-    //     Route::get('vnpay-return', 'vnpayReturn')->name('admin.checkout.vnpay-return');
-    //     Route::get('{orderCode}', 'order')->name('admin.checkout.order');
-    // });
+    Route::get("/cart", [CartController::class, 'index'])->name("admin.cart.index");
 
-    // Route::get("/cart", [CartController::class, 'index'])->name("admin.cart.index");
+    Route::prefix("upgrate")->controller(UpgradeController::class)->group(function () {
+        Route::get("", "index")->name("upgrate.index");
+    });
 
-    // Route::prefix('role')->controller(UserRoleController::class)->group(function () {
-    //     Route::get('upgrade', 'upgrade')->name('admin.role.upgrade');
-    //     Route::get('payment', 'payment')->name('admin.role.payment');
-    //     Route::get("vnpay-return", "vnpayReturn")->name("admin.role.vnpay-return");
-    // });
+    Route::prefix("payment")->controller(VnpayController::class)->group(function () {
+        Route::get("return", "return")->name("vnpay.return");
+        Route::get("{orderCode}", "result")->name("vnpay.result");
+    });
+});
 
-    // Route::prefix('orders')->controller(OrderController::class)->group(function () {
-    //     Route::get('', 'list')->name('admin.orders.list');
-    // });
+Route::prefix("vnpay")->controller(VnpayController::class)->group(function () {
+    Route::get("ipn", "ipn")->name("vnpay.ipn");
 });

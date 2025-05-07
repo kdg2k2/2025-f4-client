@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Document extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     // type document
     public function type()

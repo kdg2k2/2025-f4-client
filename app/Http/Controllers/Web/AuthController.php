@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function login()
+    public function login(Request $request)
     {
         if (auth('api')->user())
             return redirect(route('admin.dashboard'));
