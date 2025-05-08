@@ -41,7 +41,7 @@ function toggleDropdown(ele3) {
 
 document.querySelector(".main-content").onclick = () => {
     var dropDown = document.getElementById('dropdown-toggle');
-    if (dropDown.style.display == 'block') {
+    if (dropDown?.style && dropDown.style.display == 'block') {
         dropDown.style.display = 'none';
     }
 }

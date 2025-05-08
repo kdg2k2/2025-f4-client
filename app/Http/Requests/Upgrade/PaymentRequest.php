@@ -34,4 +34,14 @@ class PaymentRequest extends FormRequest
             'package_id' => 'required|integer|exists:packages,id',
         ];
     }
+
+    // messages
+    public function messages(): array
+    {
+        return [
+            'package_id.required' => 'The package id is required.',
+            'package_id.integer' => 'The package id must be an integer.',
+            'package_id.exists' => 'The selected package id is invalid.',
+        ];
+    }
 }

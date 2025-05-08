@@ -58,4 +58,4 @@ const Category = {
     },
 };
 
-Category.init();
+// Category.init();

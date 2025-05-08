@@ -48,7 +48,7 @@ const makeHttpRequest = (
                 fetchOptions.body = params;
             } else {
                 const body = { ...params, _token: csrfToken };
-                fetchOptions.headers = { "Content-Type": "application/json" };
+                fetchOptions.headers = { "Content-Type": "application/json", Accept: "application/json" };
                 fetchOptions.body = JSON.stringify(body);
             }
         } else if (Object.keys(params).length) {

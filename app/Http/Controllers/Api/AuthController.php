@@ -45,13 +45,15 @@ class AuthController extends Controller
             ->cookie('refresh_token', $data['refresh_token'], $data['refresh_token_expires_in'], '/', null, !$isLocal, true, false, 'Strict');
     }
 
-    public function logout()
+    public function logout(Request $req)
     {
-        return $this->catchAPI(function () {
+        return $this->catchAPI(function () use ($req) {
             $this->authService->logout();
             return response()->json([
                 'message' => 'User successfully signed out'
-            ], 200);
+            ], 200)
+                ->cookie('access_token')
+                ->cookie('refresh_token');
         });
     }
 

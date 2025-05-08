@@ -20,28 +20,30 @@
 </head>
 
 <body class="main-body light-theme">
-<div class="page">
-    @include('pages.layouts.header')
-    @yield('content')
-    @include('pages.layouts.footer')
-</div>
-@include('pages.layouts.moveTop')
-<script src="template-admin/admin/js/vendors/jquery/jquery.min.js"></script>
-<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/libs/@popperjs/core/umd/popper.min.js"></script>
-<script src="assets/js/defaultmenu.js"></script>
-<script src="assets/js/category-menu.js"></script>
-<script src="assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-<script src="assets/js/swiper.js"></script>
-<script src="assets/js/countdown.js"></script>
-<script src="assets/js/sticky.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="asset/js/fetch.js"></script>
-<script src="asset/js/nostfly-main/nostfly.js"></script>
-<script src="asset/js/nostfly-main/use-nostfly.js"></script>
-<script src="asset/js/loading.js"></script>
-<script src="assets/js/layout.js"></script>
+    <div class="page">
+        @include('pages.layouts.header')
+        @yield('content')
+        @include('pages.layouts.footer')
+    </div>
+    @include('pages.layouts.moveTop')
+    <script src="template-admin/admin/js/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/@popperjs/core/umd/popper.min.js"></script>
+    <script src="assets/js/defaultmenu.js"></script>
+    <script src="assets/js/category-menu.js"></script>
+    <script src="assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/sticky.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="asset/js/fetch.js"></script>
+    <script src="asset/js/nostfly-main/nostfly.js"></script>
+    <script src="asset/js/nostfly-main/use-nostfly.js"></script>
+    <script src="asset/js/loading.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="\template-admin\admin\js\user\index.js"></script>
+    @yield('js')
 </body>
 
 </html>
