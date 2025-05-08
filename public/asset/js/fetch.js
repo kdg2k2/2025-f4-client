@@ -136,7 +136,10 @@ const apiRequest = async (
                         isRefreshing = false;
                         requestQueue.forEach((cb) => cb.reject(refreshErr));
                         requestQueue = [];
-                        window.location.href = "/login";
+                        setTimeout(
+                            () => (window.location.href = "/login"),
+                            1000
+                        );
                         throw refreshErr;
                     });
             }

@@ -61,4 +61,10 @@ class OrderService extends BaseService
             return $records;
         });
     }
+
+    public function findById(int $id){
+        return $this->tryThrow(function () use ($id) {
+            return $this->orderRepository->findById($id);
+        });
+    }
 }

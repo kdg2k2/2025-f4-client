@@ -323,7 +323,8 @@ class VnPayService extends BaseService
             ];
         }
         $this->ddService->createMany($ddItems);
-        // $this->sendMailPaymentSuccess();
+        $order = $this->orderService->findById($orderId);
+        $this->sendMailPaymentSuccess($order->user->email, $order->order_code);
     }
 
     protected function sendMailPaymentSuccess($email, $orderCode)
