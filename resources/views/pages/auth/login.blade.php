@@ -105,6 +105,7 @@
     <script src="asset/js/loading.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/show-password.js"></script>
+    <script src="\template-admin\admin\js\user\index.js"></script>
     <script>
         const redirect = () => {
             window.location.href = '/admin';
