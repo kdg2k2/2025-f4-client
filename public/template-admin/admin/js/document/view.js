@@ -1,21 +1,28 @@
 const pageViewDocument = {
     elements: {
         documentView: $("#document-view"),
-        documentTitle: $(".title-document"),
     },
     getData: function () {
         const id = this.getId();
-        return http.get(`api/document/${id}`);
+        return http.get(
+            `http://127.0.0.1:8001/api/document/show?document_id=${id}`
+        );
     },
-    update: function ({ document, images }) {
+    update: function ({ path }) {
         const documentView = this.elements.documentView;
-        const documentTitle = this.elements.documentTitle;
-        documentTitle.text(document.title);
-        images.forEach((item) => {
-            documentView.append(`
-                <img src="${item.path}" alt="${item.path}"/>
+        documentView.html(`
+            <iframe
+                src="https://view.officeapps.live.com/op/embed.aspx?src=${path}&embedded=true"
+                width="100%"
+                height="800px"
+                frameborder="0"
+                allowfullscreen
+                webkitallowfullscreen
+                mozallowfullscreen
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
             `);
-        });
     },
     init: async function () {
         const { data } = await this.getData();
