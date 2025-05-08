@@ -2,7 +2,7 @@
 
 :root {
     --body-bg-rgb: 255, 255, 255;
-    --primary-rgb: 20, 87, 230;
+    --primary-rgb: 36, 167, 126;
     --secondary-rgb: 247, 131, 38;
     --warning-rgb: 245, 177, 75;
     --info-rgb: 78, 194, 240;
@@ -39,7 +39,6 @@
     --muted: #7987a1;
     --menu-color: #6b6b7e;
     --border-width: 1px;
-    /* Gray set */
     --gray-100: #f9fafb;
     --gray-200: #f2f4f5;
     --gray-300: #e6eaeb;
@@ -49,7 +48,6 @@
     --gray-700: #4d5875;
     --gray-800: #383853;
     --gray-900: #323251;
-    /* White set */
     --white-1: rgba(255, 255, 255, 0.1);
     --white-2: rgba(255, 255, 255, 0.2);
     --white-3: rgba(255, 255, 255, 0.3);
@@ -63,7 +61,6 @@
     --white-07: rgba(255, 255, 255, 0.07);
     --white-75: rgba(255, 255, 255, 0.075);
     --white-08: rgba(255, 255, 255, 0.08);
-    /* Black set */
     --black-1: rgba(0, 0, 0, 0.1);
     --black-2: rgba(0, 0, 0, 0.2);
     --black-3: rgba(0, 0, 0, 0.3);
@@ -75,7 +72,6 @@
     --black-9: rgba(0, 0, 0, 0.9);
     --black-03: rgba(0, 0, 0, 0.03);
     --black-05: rgba(0, 0, 0, 0.05);
-    /* Float */
     --float-start: left;
     --float-end: right;
 }
@@ -84,120 +80,6 @@ p {
     text-align: justify;
     font-size: 14px;
 }
-
-[data-theme-mode=dark] {
-    --body-bg-rgb: 23, 38, 58;
-    --custom-white: rgb(var(--body-bg-rgb));
-    --custom-black: #fff;
-    --border: rgba(255, 255, 255, 0.1);
-    --default-text-color: rgba(255, 255, 255, 0.7);
-    --color-dark: #fff;
-    --dark-rgb: 40, 40, 40;
-    --default-background: rgba(255, 255, 255, 0.1);
-    --default-body-bg-color: rgb(var(--body-bg-rgb), 0.95);
-    --muted: rgba(255, 255, 255, 0.4);
-    --light-rgb: 255, 255, 255, 0.1;
-    --menu-color: 255, 255, 255;
-    /* Gray Set */
-    --gray-100: rgba(255, 255, 255, 0.02);
-    --gray-200: rgba(255, 255, 255, 0.05);
-    --gray-300: rgba(255, 255, 255, 0.1);
-    --gray-400: rgba(255, 255, 255, 0.15);
-    --gray-500: rgba(255, 255, 255, 0.2);
-    --gray-600: rgba(255, 255, 255, 0.25);
-    --gray-700: rgba(255, 255, 255, 0.3);
-    --gray-800: rgba(255, 255, 255, 0.35);
-    --gray-900: rgba(255, 255, 255, 0.4);
-    /* white set */
-    --white-1: rgba(0, 0, 0, 0.1);
-    --white-2: rgba(0, 0, 0, 0.2);
-    --white-3: rgba(0, 0, 0, 0.3);
-    --white-4: rgba(0, 0, 0, 0.4);
-    --white-5: rgba(0, 0, 0, 0.5);
-    --white-6: rgba(0, 0, 0, 0.6);
-    --white-7: rgba(0, 0, 0, 0.7);
-    --white-8: rgba(0, 0, 0, 0.8);
-    --white-9: rgba(0, 0, 0, 0.9);
-    --white-05: rgba(0, 0, 0, 0.05);
-    --white-07: rgba(0, 0, 0, 0.07);
-    --white-75: rgba(0, 0, 0, 0.075);
-    --white-08: rgba(0, 0, 0, 0.08);
-    /* black set */
-    --black-1: rgba(255, 255, 255, 0.1);
-    --black-2: rgba(255, 255, 255, 0.2);
-    --black-3: rgba(255, 255, 255, 0.3);
-    --black-4: rgba(255, 255, 255, 0.4);
-    --black-5: rgba(255, 255, 255, 0.5);
-    --black-6: rgba(255, 255, 255, 0.6);
-    --black-7: rgba(255, 255, 255, 0.7);
-    --black-8: rgba(255, 255, 255, 0.8);
-    --black-9: rgba(255, 255, 255, 0.9);
-    --black-03: rgba(255, 255, 255, 0.03);
-    --black-05: rgba(255, 255, 255, 0.05);
-}
-
-@media (prefers-color-scheme: dark) {
-    [data-theme-mode=dark] {
-        --body-bg-rgb: 23, 38, 58;
-        --custom-white: rgb(var(--body-bg-rgb));
-        --custom-black: #fff;
-        --border: rgba(255, 255, 255, 0.1);
-        --default-text-color: rgba(255, 255, 255, 0.7);
-        --dark-rgb: 20, 20, 20;
-        --default-background: rgba(255, 255, 255, 0.1);
-        --default-body-bg-color: rgb(var(--body-bg-rgb), 0.95);
-        --muted: rgba(255, 255, 255, 0.4);
-        --light-rgb: 255, 255, 255, 0.1;
-        --menu-color: 255, 255, 255;
-        /* Gray Set */
-        --gray-100: rgba(255, 255, 255, 0.02);
-        --gray-200: rgba(255, 255, 255, 0.05);
-        --gray-300: rgba(255, 255, 255, 0.1);
-        --gray-400: rgba(255, 255, 255, 0.15);
-        --gray-500: rgba(255, 255, 255, 0.2);
-        --gray-600: rgba(255, 255, 255, 0.25);
-        --gray-700: rgba(255, 255, 255, 0.3);
-        --gray-800: rgba(255, 255, 255, 0.35);
-        --gray-900: rgba(255, 255, 255, 0.4);
-        /* white set */
-        --white-1: rgba(0, 0, 0, 0.1);
-        --white-2: rgba(0, 0, 0, 0.2);
-        --white-3: rgba(0, 0, 0, 0.3);
-        --white-4: rgba(0, 0, 0, 0.4);
-        --white-5: rgba(0, 0, 0, 0.5);
-        --white-6: rgba(0, 0, 0, 0.6);
-        --white-7: rgba(0, 0, 0, 0.7);
-        --white-8: rgba(0, 0, 0, 0.8);
-        --white-9: rgba(0, 0, 0, 0.9);
-        --white-05: rgba(0, 0, 0, 0.05);
-        --white-07: rgba(0, 0, 0, 0.07);
-        --white-75: rgba(0, 0, 0, 0.075);
-        --white-08: rgba(0, 0, 0, 0.08);
-        /* black set */
-        --black-1: rgba(255, 255, 255, 0.1);
-        --black-2: rgba(255, 255, 255, 0.2);
-        --black-3: rgba(255, 255, 255, 0.3);
-        --black-4: rgba(255, 255, 255, 0.4);
-        --black-5: rgba(255, 255, 255, 0.5);
-        --black-6: rgba(255, 255, 255, 0.6);
-        --black-7: rgba(255, 255, 255, 0.7);
-        --black-8: rgba(255, 255, 255, 0.8);
-        --black-9: rgba(255, 255, 255, 0.9);
-        --black-03: rgba(255, 255, 255, 0.03);
-        --black-05: rgba(255, 255, 255, 0.05);
-    }
-}
-
-[dir=rtl] {
-    --float-start: right;
-    --float-end: left;
-}
-
-/* ######## FONT ######## */
-
-/* ######## BOOTSTRAP ######## */
-
-/* Start::button default */
 
 .btn {
     padding: 0.5rem 1rem;
@@ -213,10 +95,6 @@ p {
 .btn:active {
     color: #fff;
 }
-
-/* End::button default */
-
-/* Start::btn-primary */
 
 .btn-primary {
     background-color: var(--primary-color);
@@ -253,10 +131,6 @@ p {
     background-color: var(--primary-color);
     border-color: var(--primary-border);
 }
-
-/* End::btn-primary */
-
-/* Start::btn-secondary */
 
 .btn-secondary {
     background-color: rgb(var(--secondary-rgb)) !important;
@@ -874,15 +748,15 @@ p {
 }
 
 .btn-info-dark {
-    background-color: #43abfc;
-    border-color: #43abfc;
+    background-color: rgb(var(--secondary-rgb));
+    border-color: rgb(var(--secondary-rgb));
     color: #fff;
 }
 
 .btn-info-dark:hover,
 .btn-info-dark.active {
-    background-color: #43abfc;
-    border-color: #43abfc;
+    background-color: rgb(var(--secondary-rgb));
+    border-color: rgb(var(--secondary-rgb));
     color: #fff;
     opacity: 0.9;
 }
