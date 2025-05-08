@@ -33,6 +33,9 @@ Route::middleware("api")->group(function () {
         Route::post("refresh", "refresh")->middleware("throttle:5,1")->name("auth.refresh");
         # logout
         Route::post("logout", "logout")->middleware("auth:api")->name("auth.logout");
+        # forget password
+        Route::post("forget-password", "forgetPassword")->name("api.forget-password");
+        Route::post("forget-password/change-pass", "forgetPasswordChangePass")->name("api.forget-password.change-pass");
         # google
         Route::prefix("google")->group(function () {
             # redirect to Google's OAuth page

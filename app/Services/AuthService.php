@@ -5,7 +5,6 @@ namespace App\Services;
 use Carbon\Carbon;
 use Exception;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Token;
@@ -183,6 +182,77 @@ class AuthService extends BaseService
                 'end_date' => Carbon::now()->addDays($p['duration_days']),
             ]);
             return $user;
+        });
+    }
+
+    public function forgetPassword(array $request)
+    {
+        return $this->tryThrow(function () use ($request) {
+            $user = $this->userService->findByEmail($request['email']);
+            $password_reset_code = strtoupper(str_replace('-', '', Str::uuid()->toString()) . date('dmYHis'));
+            $user->update([
+                "password_reset_code" => $password_reset_code,
+                "password_reset_expires_at" => date('Y-m-d H:i:s', strtotime('+10 minutes')),
+            ]);
+
+            (new EmailService)->sendMail(
+                'emails.forget-password',
+                'Quên mật khẩu',
+                [$request['email']],
+                [
+                    'url' => route('forget-password.code', ['code' => $password_reset_code]),
+                    'userName' => $user->name,
+                ]
+            );
+        });
+    }
+
+    public function forgetPasswordCheckCode(string $code)
+    {
+        return $this->tryThrow(function () use ($code) {
+            $user = $this->userService->findByResetPasswordCode($code);
+            if (empty($user))
+                throw new Exception("Mã khôi phục không tồn tại");
+
+            $now = strtotime(date('Y-m-d H:i:s'));
+            $expire = strtotime(date('Y-m-d H:i:s', strtotime($user->password_reset_expires_at)));
+            if ($expire < $now)
+                throw new Exception("Liên kết đổi mật khẩu đã hết hạn");
+            return $user;
+        });
+    }
+
+    public function forgetPasswordCode(array $request)
+    {
+        return $this->tryThrow(function () use ($request) {
+            $user = $this->userService->findByEmail($request['email']);
+            $password_reset_code = strtoupper(str_replace('-', '', Str::uuid()->toString()) . date('dmYHis'));
+            $user->update([
+                "password_reset_code" => $password_reset_code,
+                "password_reset_expires_at" => date('Y-m-d H:i:s', strtotime('+3 minutes')),
+            ]);
+
+            (new EmailService)->sendMail(
+                'emails.forget-password',
+                'Quên mật khẩu',
+                [$request['email']],
+                [
+                    'url' => route('forget-password.code', ['code' => $password_reset_code]),
+                    'userName' => $user->name,
+                ]
+            );
+        });
+    }
+
+    public function forgetPasswordChangePass(array $request)
+    {
+        return $this->tryThrow(function () use ($request) {
+            $user = $this->forgetPasswordCheckCode($request['code']);
+            $user->update([
+                "password" => bcrypt($request['password']),
+                "password_reset_code" => null,
+                "password_reset_expires_at" => null,
+            ]);
         });
     }
 }

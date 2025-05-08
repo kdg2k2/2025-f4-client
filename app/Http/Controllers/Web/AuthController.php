@@ -3,10 +3,18 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\ForgetPasswordCodeRequest;
+use App\Services\AuthService;
+use Exception;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    protected $authService;
+    public function __construct()
+    {
+        $this->authService = app(AuthService::class);
+    }
     public function login(Request $request)
     {
         if (auth('api')->user())
@@ -28,6 +36,17 @@ class AuthController extends Controller
 
     public function forgetPassword()
     {
-        return view("admin.auth.forget-password");
+        return view("pages.auth.forget-password");
+    }
+
+    public function forgetPasswordCode(ForgetPasswordCodeRequest $request)
+    {
+        $code = $request->validated()['code'];
+        try {
+            $this->authService->forgetPasswordCheckCode($code);
+        } catch (Exception $e) {
+            return redirect(route('forget-password'))->with('err', $e->getMessage());
+        }
+        return view("pages.auth.forget-password-code", ['code' => $code]);
     }
 }
