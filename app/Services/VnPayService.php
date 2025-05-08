@@ -75,7 +75,7 @@ class VnPayService extends BaseService
                 'request' => $data,
             ]);
 
-            Log::info("VNPAY PAYLOAD:". $url);
+            Log::info("VNPAY PAYLOAD:" . $url);
             return [
                 'payment' => $payment,
                 'url' => $url,
@@ -226,6 +226,11 @@ class VnPayService extends BaseService
                             ];
                         $this->handleAfterPaySuccessForNone($items->toArray(), $payment->order_id);
                     }
+                } else {
+                    $this->orderService->update([
+                        'id' => $payment->order_id,
+                        'status' => 'cancelled',
+                    ]);
                 }
             }
 

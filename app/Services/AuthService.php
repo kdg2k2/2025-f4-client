@@ -39,7 +39,7 @@ class AuthService extends BaseService
     public function refreshToken(array $request)
     {
         return $this->tryThrow(function () use ($request) {
-            $refreshToken = $request['refresh_token'];
+            $refreshToken = request()->cookie('refresh_token');
             if (!$refreshToken)
                 throw new Exception('Missing refresh token', 401);
 
