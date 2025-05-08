@@ -371,8 +371,8 @@
                         </li>
                     </ul>
                     <div class="d-xl-flex d-lg-none d-grid gap-2 text-center">
-                        <a href="register" class="btn btn-secondary min-w-fit-content">Đăng ký</a>
-                        <a href="login" class="btn btn-outline-light login-btn min-w-fit-content">Đăng nhập</a>
+                        <a href="register" id="register-btn" class="btn btn-secondary min-w-fit-content">Đăng ký</a>
+                        <a href="login" id="login-btn" class="btn btn-outline-light login-btn min-w-fit-content">Đăng nhập</a>
                     </div>
                 </nav>
             </div>
