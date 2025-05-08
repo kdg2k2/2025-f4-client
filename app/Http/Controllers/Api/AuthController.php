@@ -26,11 +26,13 @@ class AuthController extends Controller
         });
     }
 
-    public function refresh(RefreshRequest $request)
+    public function refresh(Request $request)
     {
-        return $this->catchAPI(function () use ($request) {
-            $data = $request->validated();
-            $res = $this->authService->refreshToken($data);
+        $refresh_token = $request->cookie('refresh_token');
+        return $this->catchAPI(function () use ($refresh_token) {
+            $res = $this->authService->refreshToken([
+                'refresh_token' => $refresh_token,
+            ]);
             return $this->setCookie($res);
         });
     }

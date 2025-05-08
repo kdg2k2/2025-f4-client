@@ -16,7 +16,7 @@ const user = (function () {
         return http.post("/api/auth/refresh", {}, "", false);
     };
     const profile = () => {
-        return http.get("/api/profile", {}, "", false);
+        return makeHttpRequest("get", "/api/profile", {}, "", false);
     };
     return {
         setAll: function (userData) {
