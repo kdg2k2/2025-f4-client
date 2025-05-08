@@ -13,8 +13,6 @@
 <link rel="stylesheet" type="text/css" href="template-admin/admin/css/vendors/slick-theme.css" />
 <link rel="stylesheet" href="template-admin/admin/css/style.css" />
 <link id="color" rel="stylesheet" href="template-admin/admin/css/color-1.css" media="screen" />
-<link href="template-admin/css/notify.css" rel="stylesheet" />
-<link href="template-admin/css/prettify.css" rel="stylesheet" />
 <link href="\template-admin\admin\css\cart.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kdg2k2/FontAwesome_6_Pro@main/css/all.min.css">
 <link rel="stylesheet" href="asset/js/nostfly-main/nostfly.css">

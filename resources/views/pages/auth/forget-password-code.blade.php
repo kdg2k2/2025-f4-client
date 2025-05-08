@@ -19,8 +19,9 @@
         <div class="main-content app-content pt-0">
             <section class="section banner-pd-1">
                 <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-xl-7 col-lg-9 mt-3">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-3"></div>
+                        <div class="col-lg-10 col-md-6">
                             <a href="/">
                                 <img width="300" src="../assets/images/brand/logo-color.png" alt="img"
                                     class="auth-logo logo-color mb-4 mx-auto">
@@ -29,26 +30,10 @@
                             </a>
                             <div class="card border mb-0">
                                 <div class="card-body p-sm-6">
-                                    <h3 class="mb-1">Đăng ký</h3>
-                                    <p class="mb-4 tx-muted">Đăng ký tài khoản để sử dụng dịch vụ.</p>
-                                    <form class="form-horizontal" id="formRegister">
+                                    <h3 class="mb-1">Đổi mật khẩu</h3>
+                                    <p class="mb-4 tx-muted">Nhập mật khẩu mới của bạn</p>
+                                    <form class="form-horizontal" id="post-form">
                                         <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="mb-3">
-                                                    <label class="mb-2 fw-500">Họ tên<span
-                                                            class="tx-danger ms-1">*</span></label>
-                                                    <input name="name" class="form-control ms-0" type="text"
-                                                        placeholder="Enter First Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="mb-3">
-                                                    <label class="mb-2 fw-500">Email<span
-                                                            class="tx-danger ms-1">*</span></label>
-                                                    <input name="email" class="form-control ms-0" type="email"
-                                                        placeholder="Enter your Email">
-                                                </div>
-                                            </div>
                                             <div class="col-sm-12">
                                                 <div class="mb-3">
                                                     <label class="mb-2 fw-500">Mật khẩu<span
@@ -79,31 +64,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div class="col-xl-12">
                                                 <div class="d-grid mb-3">
-                                                    <button type="submit" class="btn btn-primary">Tạo tài
-                                                        khoản</button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        Đổi mật khẩu
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="col-xl-12">
-                                        <div class="d-grid mb-3">
-                                            <button id="btnGoogleLogin" type="button" class="btn btn-white border">
-                                                <img src="assets/images/png/45.png" class="me-2" alt="img"
-                                                    width="20">Đăng ký với Google
-                                            </button>
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <p class="mb-0 tx-14">Đã có tài khoản ?
-                                                <a href="login" class="tx-primary ms-1">Đăng nhập</a>
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-1 col-md-3"></div>
                     </div>
                 </div>
             </section>
@@ -116,7 +89,35 @@
     <script src="asset/js/loading.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/show-password.js"></script>
-    <script src="\template-admin\admin\js\auth\reigster.js"></script>
+
+    <script>
+        const api = @json(route('api.forget-password.change-pass')) + '?code=' + @json($code);
+
+        $(document).ready(function() {
+            $("#post-form").on("submit", async function(e) {
+                try {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+
+                    const {
+                        message
+                    } = await http.post(api, formData, @json(csrf_token()));
+
+                    alertSuccess(message);
+
+                    this.reset();
+
+                    setTimeout(() => (window.location.href = '/login'), 2000);
+                } catch (error) {
+                    let {
+                        message
+                    } = error.responseJSON;
+
+                    alertErr(message);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

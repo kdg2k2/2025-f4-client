@@ -7,12 +7,11 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Xanh - Vì Cộng Đồng</title>
+    <title>{{ config('app.name') }}</title>
     <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="style">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/icons.css" rel="stylesheet">
-    <link href="template-admin/css/notify.css" rel="stylesheet" />
-    <link href="template-admin/css/prettify.css" rel="stylesheet" />
+    <link rel="stylesheet" href="asset/js/nostfly-main/nostfly.css">
 </head>
 
 <body class="main-body light-theme login-card">
@@ -61,14 +60,14 @@
                                             </div>
                                             <div class="col-xl-12">
                                                 <div class="d-flex mb-3">
-                                                    <div class="form-check">
+                                                    {{-- <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value=""
                                                             id="flexCheckDefault">
                                                         <label class="form-check-label tx-15" for="flexCheckDefault">
                                                             Ghi nhớ </label>
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="ms-auto">
-                                                        <a href="forgot-password.html"
+                                                        <a href="{{ route('forget-password') }}"
                                                             class="tx-primary ms-1 tx-13">Quên mật khẩu?</a>
                                                     </div>
                                                 </div>
@@ -98,9 +97,8 @@
         </div>
     </div>
     <script src="template-admin/admin/js/vendors/jquery/jquery.min.js"></script>
-    <script src="template-admin/js/notify.js"></script>
-    <script src="template-admin/js/prettify.js"></script>
-    <script src="template-admin/js/use-notify.js"></script>
+    <script src="asset/js/nostfly-main/nostfly.js"></script>
+    <script src="asset/js/nostfly-main/use-nostfly.js"></script>
     <script src="asset/js/fetch.js"></script>
     <script src="asset/js/loading.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
