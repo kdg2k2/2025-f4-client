@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\ForgetPasswordChagnePassRequest;
+use App\Http\Requests\Auth\ForgetPasswordRequest;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RefreshRequest;
 use App\Http\Requests\Auth\RegisterRequest;
@@ -96,6 +98,26 @@ class AuthController extends Controller
         return $this->catchAPI(function () use ($request) {
             return response()->json([
                 'data' => auth('api')->user(),
+            ], 200);
+        });
+    }
+
+    public function forgetPassword(ForgetPasswordRequest $request)
+    {
+        return $this->catchAPI(function () use ($request) {
+            $this->authService->forgetPassword($request->validated());
+            return response()->json([
+                'message' => 'Kiểm tra email để đổi lại mật khẩu',
+            ], 200);
+        });
+    }
+
+    public function forgetPasswordChangePass(ForgetPasswordChagnePassRequest $request)
+    {
+        return $this->catchAPI(function () use ($request) {
+            $this->authService->forgetPasswordChangePass($request->validated());
+            return response()->json([
+                'message' => 'Đổi mật khẩu thành công',
             ], 200);
         });
     }

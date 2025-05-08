@@ -43,4 +43,9 @@ class UserRepository
     {
         return User::where("email", $email)->first();
     }
+
+    public function findByResetPasswordCode(string $code)
+    {
+        return User::where('password_reset_code', $code)->first();
+    }
 }

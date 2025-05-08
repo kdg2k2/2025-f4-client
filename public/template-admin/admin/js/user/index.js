@@ -51,4 +51,4 @@ const user = (function () {
     };
 })();
 
-user.init();
+if (window.location.pathname != "/login") user.init();

@@ -30,6 +30,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::get("verify", "verify")->name("verify");
     # forget password
     Route::get("forget-password", "forgetPassword")->name("forget-password");
+    Route::get("forget-password-code", "forgetPasswordCode")->name("forget-password.code");
 });
 
 Route::prefix('admin')->name('admin.')->group(function () {
