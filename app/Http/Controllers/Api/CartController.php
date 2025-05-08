@@ -7,13 +7,16 @@ use App\Http\Requests\Cart\AddRequest;
 use App\Http\Requests\Cart\CartRequest;
 use App\Http\Requests\Cart\RemoveRequest;
 use App\Services\CartService;
+use App\Services\PackageUserService;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
     protected $cartService;
+    protected $packageUserService;
     public function __construct()
     {
+        $this->packageUserService = app(PackageUserService::class);
         $this->cartService = app(CartService::class);
     }
     public function index(CartRequest $request)
@@ -22,7 +25,8 @@ class CartController extends Controller
             $idUser = auth('api')->user()->id;
             $res = $this->cartService->cart($idUser, $request->validated());
             return response()->json([
-                'data' => $res['cartItems']
+                'data' => $res['cartItems'],
+                'downloads_remaining' => $this->packageUserService->countUsed($idUser),
             ], 200);
         });
     }

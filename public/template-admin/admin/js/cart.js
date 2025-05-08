@@ -18,6 +18,7 @@ const cartModule = {
         totalPrice: $(".total-price"),
         btnCheckout: $(".btn-checkout"),
         checkAll: $(".check-all"),
+        userDownloadsRemaining: $("#user-downloads-remaining"),
     },
     selects: [],
     count: 0,
@@ -108,16 +109,34 @@ const cartModule = {
         }
     },
     updateTotalPrice: function () {
-        const total = this.items
-            .filter((item) => this.selects.includes(String(item.id)))
-            .reduce((acc, item) => acc + item.document.price, 0);
+        const selecteds = this.items.filter(item =>
+            this.selects.includes(String(item.id))
+        );
+    
+        const freeCount = this.downloads_remaining;
+    
+        const sorted = [...selecteds].sort((a, b) =>
+            b.document.price - a.document.price
+        );
+    
+        const paidItems = sorted.slice(freeCount);
+    
+        const total = paidItems.reduce((sum, item) =>
+            sum + item.document.price, 0
+        );
+    
+        const remaining = Math.max(0, freeCount - selecteds.length);
+    
+        this.element.userDownloadsRemaining.text(remaining);
         this.element.totalPrice.text(formatNumber(total));
     },
+    
     init: function () {
-        this.getData().then(({ data }) => {
+        this.getData().then(({ data, downloads_remaining }) => {
             if (data) {
                 this.count = data.length;
                 this.items = data;
+                this.downloads_remaining = downloads_remaining;
             }
             this.update();
         });
@@ -152,21 +171,26 @@ const cartModule = {
             this.update();
         });
 
-        this.element.cartItems.on("click", 'input[name="cart_document_ids[]"]', (e) => {
-            e.stopPropagation(); // 👈 THÊM DÒNG NÀY
-            const form = $(e.currentTarget).closest("form");
-            const allChecked =
-                form.find('input[name="cart_document_ids[]"]').length ===
-                form.find('input[name="cart_document_ids[]"]:checked').length;
-            this.element.checkAll.prop("checked", allChecked);
-            const id = $(e.currentTarget).val();
-            if ($(e.currentTarget).is(":checked")) {
-                this.selects.push(id);
-            } else {
-                this.selects = this.selects.filter((item) => item !== id);
+        this.element.cartItems.on(
+            "click",
+            'input[name="cart_document_ids[]"]',
+            (e) => {
+                e.stopPropagation(); // 👈 THÊM DÒNG NÀY
+                const form = $(e.currentTarget).closest("form");
+                const allChecked =
+                    form.find('input[name="cart_document_ids[]"]').length ===
+                    form.find('input[name="cart_document_ids[]"]:checked')
+                        .length;
+                this.element.checkAll.prop("checked", allChecked);
+                const id = $(e.currentTarget).val();
+                if ($(e.currentTarget).is(":checked")) {
+                    this.selects.push(id);
+                } else {
+                    this.selects = this.selects.filter((item) => item !== id);
+                }
+                this.update();
             }
-            this.update();
-        });
+        );
     },
 };
 
