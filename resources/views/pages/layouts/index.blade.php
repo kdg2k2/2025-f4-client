@@ -26,7 +26,7 @@
     @include('pages.layouts.footer')
 </div>
 @include('pages.layouts.moveTop')
-
+<script src="template-admin/admin/js/vendors/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/libs/@popperjs/core/umd/popper.min.js"></script>
 <script src="assets/js/defaultmenu.js"></script>
@@ -37,6 +37,11 @@
 <script src="assets/js/countdown.js"></script>
 <script src="assets/js/sticky.js"></script>
 <script src="assets/js/custom.js"></script>
+<script src="asset/js/fetch.js"></script>
+<script src="asset/js/nostfly-main/nostfly.js"></script>
+<script src="asset/js/nostfly-main/use-nostfly.js"></script>
+<script src="asset/js/loading.js"></script>
+<script src="assets/js/layout.js"></script>
 </body>
 
 </html>

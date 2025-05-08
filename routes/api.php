@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\DocumentController;
 use App\Http\Controllers\Api\DocumentFieldController;
 use App\Http\Controllers\Api\DocumentTypeController;
 use App\Http\Controllers\Api\DownloadController;
+use App\Http\Controllers\Api\LayoutController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\UpgradeController;
 use Illuminate\Support\Facades\Route;
@@ -74,4 +75,5 @@ Route::middleware("api")->group(function () {
 
         Route::get('profile', [AuthController::class, 'profile']);
     });
+    Route::get('categories', [LayoutController::class, 'categories']);
 });

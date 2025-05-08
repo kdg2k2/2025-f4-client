@@ -95,8 +95,8 @@
                             </a>
                             <ul class="slide-menu child1 mega-slide-menu item-one mega-slide-menu-onefr without-icon"
                                 data-popper-placement="bottom" style="">
-                                <li class="mega-menu">
-                                    <div class="">
+                                <li class="mega-menu document-field">
+                                    {{-- <div>
                                         <ul>
                                             <li class="slide">
                                                 <a href="document/index" class="side-menu__item">
@@ -162,125 +162,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
-
-                                    <div class="">
-                                        <ul>
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-pink-transparent rounded-circle">
-                                                                <i class="bi bi-tree me-0 tx-pink"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Quản lý rừng bền vững</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-danger-transparent rounded-circle">
-                                                                <i class="bi bi-coin me-0 tx-danger"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Khung giá rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-warning-transparent rounded-circle">
-                                                                <i class="bi bi-journal-check me-0 tx-warning"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Tiêu chuẩn Việt Nam</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-teal-transparent rounded-circle">
-                                                                <i class="bi bi-currency-euro me-0 tx-teal"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Định mức kinh tế kỹ thuật</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="">
-                                        <ul>
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-secondary-transparent rounded-circle">
-                                                                <i class="bi bi-twitter me-0 tx-secondary"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Đa dạng sinh học</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-success-transparent rounded-circle">
-                                                                <i class="bi bi-layers me-0 tx-success"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Dự án điều tra rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/index" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-primary-transparent rounded-circle">
-                                                                <i class="bi bi-c-circle me-0 tx-primary"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Chi trả Các bon</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    </div> --}}
                                 </li>
                             </ul>
                         </li>
