@@ -42,6 +42,10 @@
                                 <input title="Chọn tất cả" type="checkbox"
                                     class="check-all form-check-input m-0 me-1" />
                                 <h5 class="mb-0">Giỏ hàng</h5>
+                                <span>
+                                    (Còn <span id="user-downloads-remaining" class="text-danger"></span> lượt tải
+                                    miễn phí)
+                                </span>
                             </div>
                             <a class="text-info" href="/admin/cart">Xem giỏ hàng</a>
                         </div>
@@ -62,7 +66,8 @@
                 </li>
                 <li class="profile-nav custom-dropdown">
                     <div class="user-wrap">
-                        <div class="user-img"><img id="user-img" src="template-admin/admin/images/profile.png" alt="user" /></div>
+                        <div class="user-img"><img id="user-img" src="template-admin/admin/images/profile.png"
+                                alt="user" /></div>
                         <div class="user-content">
                             <h6 id="user-name">
                                 User Name
