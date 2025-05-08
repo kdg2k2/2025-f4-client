@@ -15,7 +15,7 @@ const createDataTableServerSide = (
         lengthChange: true,
         autoWidth: false,
         ordering: false,
-        searching: true,
+        searching: false,
         lengthMenu: [
             [10, 50, 100],
             [10, 50, 100],

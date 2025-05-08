@@ -69,7 +69,13 @@ class VnPayService extends BaseService
             $url = config('vnpay.vnp_Url') . '?' . $query . '&vnp_SecureHash=' . $secureHash;
 
             ksort($data);
+            Log::channel('vnpay')->info('VNPAY PAYMENT URL payload:',  [
+                'ip' => $ipClient,
+                'time' => $this->getCurrentTime(),
+                'request' => $data,
+            ]);
 
+            Log::info("VNPAY PAYLOAD:". $url);
             return [
                 'payment' => $payment,
                 'url' => $url,
@@ -80,6 +86,12 @@ class VnPayService extends BaseService
     public function vnpayReturn(array $request)
     {
         return $this->tryThrow(function () use ($request) {
+            Log::channel('vnpay')->info('VNPAY RETURN payload:',  [
+                'ip' => $this->getClientIp(),
+                'time' => $this->getCurrentTime(),
+                'request' => $request,
+            ]);
+
             $formatted = $this->formatVnpayRequest($request);
             $vnpData = $formatted['request'];
             $vnpSecureHash = $formatted['vnpSecureHash'];
@@ -119,7 +131,20 @@ class VnPayService extends BaseService
     {
         return $this->tryThrow(function () use ($request) {
             $ipClient = $this->getClientIp();
+            $currentTime = $this->getCurrentTime();
+
+            Log::channel('vnpay')->info('VNPAY IPN payload:',  [
+                'ip' => $ipClient,
+                'time' => $currentTime,
+                'request' => $request,
+            ]);
+
             if (!$this->isAllowedVnpayIp($ipClient)) {
+                Log::channel('vnpay')->warning('VNPAY IPN blocked unauthorized IP', [
+                    'ip' => $ipClient,
+                    'time' => $currentTime,
+                ]);
+
                 $request['vnp_ResponseCode'] = '99';
             }
 
