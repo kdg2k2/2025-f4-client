@@ -17,11 +17,7 @@ formRegister.on("submit", function (e) {
     http.post("api/auth/register", formData)
         .then(({ message }) => {
             alertSuccess(message);
-            window.location.href = "/login";
         })
-        .catch(({ message }) => {
-            alertError(message);
-        });
 });
 
 $('#btnGoogleLogin').on('click', function () {

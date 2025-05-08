@@ -90,7 +90,31 @@ class AuthController extends Controller
         return $this->catchAPI(function () use ($request) {
             $this->authService->register($request->validated());
             return response()->json([
-                'message' => 'Đăng ký thành công',
+                'message' => 'Đăng ký thành công! Vui lòng kiểm tra email để xác thực tài khoản',
+            ], 200);
+        });
+    }
+
+    public function verify(Request $request)
+    {
+        return $this->catchAPI(function () use ($request) {
+            $this->authService->verify($request->token);
+            return response()->json([
+                'message' => 'Xác thực tài khoản thành công',
+            ], 200);
+        });
+    }
+
+    public function resendVerify(Request $request)
+    {
+        return $this->catchAPI(function () use ($request) {
+            if (empty($request->email))
+                return response()->json([
+                    'message' => 'Email không được để trống',
+                ], 422);
+            $this->authService->resendVerify($request->email);
+            return response()->json([
+                'message' => 'Gửi mã xác thực thành công',
             ], 200);
         });
     }

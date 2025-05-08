@@ -9,3 +9,15 @@ showpassword.addEventListener("click", function () {
     // toggle the icon
     this.classList.toggle("fe-eye-off");
 });
+
+const showBtn = document.querySelector("#re-show-password");
+const pass = document.querySelector("#re-password");
+
+showBtn.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = pass.getAttribute("type") === "password" ? "text" : "password";
+    pass.setAttribute("type", type);
+
+    // toggle the icon
+    this.classList.toggle("fe-eye-off");
+});

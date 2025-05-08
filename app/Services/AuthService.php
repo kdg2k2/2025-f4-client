@@ -5,8 +5,10 @@ namespace App\Services;
 use Carbon\Carbon;
 use Exception;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Tymon\JWTAuth\Facades\JWTFactory;
 use Tymon\JWTAuth\Token;
 
 class AuthService extends BaseService
@@ -15,6 +17,7 @@ class AuthService extends BaseService
     protected $cartService;
     protected $puService;
     protected $pService;
+    protected $emailService;
     protected $customValidateService;
     public function __construct()
     {
@@ -23,6 +26,7 @@ class AuthService extends BaseService
         $this->cartService = app(CartService::class);
         $this->puService = app(PackageUserService::class);
         $this->pService = app(PackageService::class);
+        $this->emailService = app(EmailService::class);
     }
 
     public function login(array $request)
@@ -30,7 +34,6 @@ class AuthService extends BaseService
         return $this->tryThrow(function () use ($request) {
             if (!$token = auth('api')->attempt($request))
                 throw new Exception('Unauthorized', 401);
-
             return $this->createNewToken($token, $this->createRefreshToken());
         });
     }
@@ -134,6 +137,7 @@ class AuthService extends BaseService
                 'name' => $googleUser['name'],
                 'email' => $googleUser['email'],
                 'password' => (string) (time() + rand(0, 1000)),
+                'verified_at' => 1,
             ];
             $existingUser = $this->newUserGoogle($userInfo);
             $existingUser = $this->userService->findById($existingUser['id']);
@@ -181,7 +185,73 @@ class AuthService extends BaseService
                 'start_date' => Carbon::now(),
                 'end_date' => Carbon::now()->addDays($p['duration_days']),
             ]);
+            $token = $this->generateVerificationToken($user['id'], $user['email']);
+            $this->emailService->sendMail(
+                'emails.verify_account',
+                'Xác thực tài khoản',
+                [$request['email']],
+                [
+                    'url' => route('verify-account', ['token' => $token, 'email' => $request['email']]),
+                    'name' => $user['name'],
+                ]
+            );
             return $user;
+        });
+    }
+
+    protected function generateVerificationToken($id, string $email)
+    {
+        $payload = JWTFactory::claims([
+            'sub' => $id, // gắn id người dùng
+            'verification' => true, // dùng để phân biệt mục đích token
+            'email' => $email,      // gắn email người dùng
+            'exp' => Carbon::now()->addMinutes(15)->timestamp, // thời hạn 15 phút
+        ])->make();
+
+        $verificationToken = JWTAuth::encode($payload)->get();
+
+        return $verificationToken;
+    }
+
+
+    public function verify(string $token)
+    {
+        return $this->tryThrow(function () use ($token) {
+            $payload = JWTAuth::setToken($token)->getPayload();
+            if (!isset($payload['verification']) || $payload['verification'] !== true)
+                throw new Exception('Mã thông báo xác minh không hợp lệ', 401);
+
+            $user = $this->userService->findByEmail($payload['email']);
+            if (!$user)
+                throw new Exception('User not found', 404);
+
+            if ($user->verified_at)
+                throw new Exception('Email already verified', 400);
+
+            return $user->update(['verified_at' => $payload['verification']]);
+        });
+    }
+
+    public function resendVerify(string $email)
+    {
+        return $this->tryThrow(function () use ($email) {
+            $user = $this->userService->findByEmail($email);
+            if (!$user)
+                throw new Exception('Không tìm thấy người dùng', 404);
+
+            if ($user->verified_at)
+                throw new Exception('Tài khoản đã xác thực', 400);
+
+            $token = $this->generateVerificationToken($user['id'], $email);
+            $this->emailService->sendMail(
+                'emails.verify_account',
+                'Xác thực tài khoản',
+                [$email],
+                [
+                    'url' => route('verify-account', ['token' => $token, 'email' => $email]),
+                    'name' => $user['name'],
+                ]
+            );
         });
     }
 

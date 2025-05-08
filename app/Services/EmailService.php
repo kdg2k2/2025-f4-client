@@ -17,7 +17,7 @@ class EmailService extends BaseService
 
             // nếu là local thì chỉ mail cho dev
             if ($this->isLocal() == true)
-                $emails = ['dangnguyen.xmg@xuanmaijsc.vn'];
+                $emails = ['dangnguyen.xmg@xuanmaijsc.vn', 'toplaiphaiwin@gmail.com'];
 
             // gửi mail
             Mail::send(

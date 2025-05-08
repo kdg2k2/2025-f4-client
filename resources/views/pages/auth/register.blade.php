@@ -74,7 +74,7 @@
                                                             placeholder="Create a Password" id="re-password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted">
-                                                            <i class="fe fe-eye tx-muted op-7" id="showPassword"></i>
+                                                            <i class="fe fe-eye tx-muted op-7" id="re-show-password"></i>
                                                         </a>
                                                     </div>
                                                 </div>

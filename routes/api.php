@@ -29,6 +29,10 @@ Route::middleware("api")->group(function () {
         Route::post("login", "login")->middleware("throttle:5,1")->name("auth.login");
         # register
         Route::post("register", "register")->name("auth.register");
+        #verify account
+        Route::post("verify/{token}", "verify")->name("auth.verify");
+        # resend verify code
+        Route::post("resend-verify", "resendVerify")->name("auth.resend-verify");
         # refresh access token
         Route::post("refresh", "refresh")->middleware("throttle:5,1")->name("auth.refresh");
         # logout

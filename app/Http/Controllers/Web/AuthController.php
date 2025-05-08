@@ -29,9 +29,9 @@ class AuthController extends Controller
         return view("pages.auth.register");
     }
 
-    public function verify()
+    public function verify($token)
     {
-        return view("admin.auth.verify");
+        return view("pages.auth.verify", ['token' => $token]);
     }
 
     public function forgetPassword()
