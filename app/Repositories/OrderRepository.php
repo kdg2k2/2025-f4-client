@@ -49,9 +49,13 @@ class OrderRepository
         return $order;
     }
 
-
     public function update(array $request, $id)
     {
         return Order::where('id', $id)->update($request);
+    }
+
+    public function findById(int $int)
+    {
+        return Order::find($int);
     }
 }
