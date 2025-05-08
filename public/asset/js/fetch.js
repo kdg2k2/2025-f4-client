@@ -15,7 +15,10 @@ const makeHttpRequest = (
     url,
     params = {},
     csrfToken = "",
-    isLoading = true
+    isLoading = true,
+    config = {
+        alertErr: true,
+    }
 ) => {
     return new Promise((resolve, reject) => {
         method = method.toLowerCase();
@@ -48,7 +51,10 @@ const makeHttpRequest = (
                 fetchOptions.body = params;
             } else {
                 const body = { ...params, _token: csrfToken };
-                fetchOptions.headers = { "Content-Type": "application/json", Accept: "application/json" };
+                fetchOptions.headers = {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                };
                 fetchOptions.body = JSON.stringify(body);
             }
         } else if (Object.keys(params).length) {
@@ -85,7 +91,7 @@ const makeHttpRequest = (
                     let msg = data.message || data;
                     if (data.errors)
                         msg = Object.values(data.errors).flat().join(" - ");
-                    alertErr(msg);
+                    if (config.alertErr) alertErr(msg);
                     throw { status: response.status, data };
                 }
 
@@ -111,10 +117,11 @@ const apiRequest = async (
     url,
     params = {},
     csrfToken = "",
-    isLoading
+    isLoading,
+    config
 ) => {
     try {
-        return await makeHttpRequest(method, url, params, csrfToken, isLoading);
+        return await makeHttpRequest(method, url, params, csrfToken, isLoading, config);
     } catch (err) {
         if (url != "/api/auth/login" && err.status === 401) {
             if (!isRefreshing) {
@@ -168,35 +175,35 @@ const apiRequest = async (
 };
 
 class HttpIntant {
-    async get(url, data, csrfToken, isLoading) {
-        return apiRequest("GET", url, data, csrfToken, isLoading);
+    async get(url, data, csrfToken, isLoading, config) {
+        return apiRequest("GET", url, data, csrfToken, isLoading, config);
     }
-    async post(url, data, csrfToken, isLoading) {
-        return apiRequest("POST", url, data, csrfToken, isLoading);
+    async post(url, data, csrfToken, isLoading, config) {
+        return apiRequest("POST", url, data, csrfToken, isLoading, config);
     }
-    async put(url, data, csrfToken, isLoading) {
+    async put(url, data, csrfToken, isLoading, config) {
         if (data instanceof FormData) {
             data.append("_method", "PUT");
         } else {
             data = { ...data, _method: "PUT" };
         }
-        return apiRequest("POST", url, data, csrfToken, isLoading);
+        return apiRequest("POST", url, data, csrfToken, isLoading, config);
     }
-    async delete(url, data, csrfToken, isLoading) {
+    async delete(url, data, csrfToken, isLoading, config) {
         if (data instanceof FormData) {
             data.append("_method", "DELETE");
         } else {
             data = { ...data, _method: "DELETE" };
         }
-        return apiRequest("POST", url, data, csrfToken, isLoading);
+        return apiRequest("POST", url, data, csrfToken, isLoading, config);
     }
-    async patch(url, data, csrfToken, isLoading) {
+    async patch(url, data, csrfToken, isLoading, config) {
         if (data instanceof FormData) {
             data.append("_method", "PATCH");
         } else {
             data = { ...data, _method: "PATCH" };
         }
-        return apiRequest("POST", url, data, csrfToken, isLoading);
+        return apiRequest("POST", url, data, csrfToken, isLoading, config);
     }
 }
 const http = new HttpIntant();

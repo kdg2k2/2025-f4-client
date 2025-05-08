@@ -25,7 +25,9 @@ const user = (function () {
     };
     const profile = async () => {
         try {
-            return await makeHttpRequest("get", "/api/profile", {}, "", false);
+            return await makeHttpRequest("get", "/api/profile", {}, "", false, {
+                alertErr: false,
+            });
         } catch (error) {
             return { data: {} };
         }
@@ -50,16 +52,16 @@ const user = (function () {
         },
         getUserForLocalStorage: function () {
             try {
-                return JSON.parse(localStorage.getItem("user"));
+                return JSON.parse(localStorage.getItem("user")) || {};
             } catch (error) {
-                return null;
+                return {};
             }
         },
         updateHeader,
         init: async function () {
             const userRecord = this.getUserForLocalStorage();
             if (!this.isEmpty(userRecord)) {
-                data = { ...userRecord };
+                this.setAll(userRecord);
             } else if ("/login" !== window.location.pathname) {
                 const { data } = await profile();
                 this.setAll(data);
@@ -67,8 +69,8 @@ const user = (function () {
             updateHeader();
             if (data.id) setInterval(() => refresh(), 1000 * 60 * 10); // 10 minutes
         },
-        isEmpty: function () {
-            return Object.keys(data).length === 0;
+        isEmpty: function (d) {
+            return Object.keys(d).length === 0;
         },
     };
 })();
