@@ -5,7 +5,7 @@ const pageViewDocument = {
     getData: function () {
         const id = this.getId();
         return http.get(
-            `http://127.0.0.1:8001/api/document/show?document_id=${id}`
+            `https://admin.tanmaixanh.vn/api/document/show?document_id=${id}`
         );
     },
     update: function ({ path }) {

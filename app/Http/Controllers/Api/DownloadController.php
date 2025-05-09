@@ -28,7 +28,7 @@ class DownloadController extends Controller
 
             $documentDownload = $this->documentDownloadService->getByCode($code, $userId, $orderCode);
 
-            $response = Http::get('http://127.0.0.1:8001/api/document/download', [
+            $response = Http::get('https://admin.tanmaixanh.vn/api/document/download', [
                 'document_id' => $documentDownload->id
             ]);
 
