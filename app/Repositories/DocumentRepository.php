@@ -11,6 +11,11 @@ class DocumentRepository
         return Document::when(isset($request["type_id"]), function ($query) use ($request) {
                 $query->where("type_id", $request["type_id"]);
             })
+            ->when(isset($request["field_id"]), function ($query) use ($request) {
+                $query->whereHas("type.field", function ($query) use ($request) {
+                    $query->where("id", $request["field_id"]);
+                });
+            })
             ->with("type.field")
             ->orderByDesc("id")->get()->toArray();
     }

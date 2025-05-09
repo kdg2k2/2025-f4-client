@@ -11,4 +11,8 @@ class DocumentFieldRepository
         return DocumentField::orderByDesc("id")->get()->toArray();
     }
 
+    public function getField($id)
+    {
+        return DocumentField::where("id", $id)->first();
+    }
 }

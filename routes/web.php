@@ -16,7 +16,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/privacy-policy', 'getPrivacy');
     Route::get('/faq', 'getFAQ');
     Route::get('/document', 'getDocument');
-    Route::get('/document/index', 'getDocumentDetail');
+    Route::get('/document/{id}', 'getDocumentDetail');
     Route::get('/maps', 'getMaps');
     Route::get('/maps/index', 'getMapsDetail');
 });

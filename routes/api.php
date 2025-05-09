@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\DocumentTypeController;
 use App\Http\Controllers\Api\DownloadController;
 use App\Http\Controllers\Api\LayoutController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\StatisticalController;
 use App\Http\Controllers\Api\UpgradeController;
 use Illuminate\Support\Facades\Route;
 
@@ -77,10 +78,15 @@ Route::middleware("api")->group(function () {
         });
 
         Route::prefix("download")->controller(DownloadController::class)->group(function () {
+            Route::get('temp/{token}', 'tempDownload')->name('tempDownload');
             Route::get("{code}/{orderCode}", "downloadDocument");
         });
 
         Route::get('profile', [AuthController::class, 'profile']);
+
+        Route::prefix("statistical")->controller(StatisticalController::class)->group(function () {
+            Route::get('', 'index');
+        });
     });
     Route::get('categories', [LayoutController::class, 'categories']);
 });

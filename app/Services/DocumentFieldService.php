@@ -20,4 +20,10 @@ class DocumentFieldService extends BaseService
             return $records;
         });
     }
+    public function getField($id)
+    {
+        return $this->tryThrow(function () use ($id) {
+            return $this->documentFieldRepository->getField($id);
+        });
+    }
 }

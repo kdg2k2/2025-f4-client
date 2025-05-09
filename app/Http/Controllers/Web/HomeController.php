@@ -3,9 +3,18 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Services\DocumentFieldService;
+use App\Services\DocumentService;
 
 class HomeController extends Controller
 {
+    protected $documentService;
+    protected $documentFieldService;
+    public function __construct()
+    {
+        $this->documentService = app(DocumentService::class);
+        $this->documentFieldService = app(DocumentFieldService::class);
+    }
     public function index()
     {
         return view('pages.index');
@@ -31,9 +40,17 @@ class HomeController extends Controller
         return view('pages.document.index');
     }
 
-    public function getDocumentDetail()
+    public function getDocumentDetail($id)
     {
-        return view('pages.document.detail');
+        $data = $this->documentService->list([
+            "paginate" => 0,
+            'field_id' => $id,
+        ]);
+        $documentField = $this->documentFieldService->getField($id);
+        return view('pages.document.detail', [
+            'data' => $data,
+            'documentField' => $documentField,
+        ]);
     }
 
     public function getMaps()

@@ -62,9 +62,24 @@ class OrderService extends BaseService
         });
     }
 
-    public function findById(int $id){
+    public function findById(int $id)
+    {
         return $this->tryThrow(function () use ($id) {
             return $this->orderRepository->findById($id);
+        });
+    }
+
+    public function totalOrder(int $idUser)
+    {
+        return $this->tryThrow(function () use ($idUser) {
+            return $this->list(['user_id' => $idUser, 'paginate' => 0])->count();
+        });
+    }
+
+    public function totalOrderPaid($idUser)
+    {
+        return $this->tryThrow(function () use ($idUser) {
+            return $this->orderRepository->totalOrderPaid(['paid', 'complete'], $idUser);
         });
     }
 }

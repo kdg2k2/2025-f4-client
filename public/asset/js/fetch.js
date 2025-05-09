@@ -75,9 +75,10 @@ const makeHttpRequest = (
                 }
 
                 if (response.status >= 500) {
+                    const data = await response.json();
                     throw {
                         status: response.status,
-                        message: response.statusText,
+                        message: data.message || response.statusText,
                     };
                 }
 

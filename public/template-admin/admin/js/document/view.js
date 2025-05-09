@@ -25,15 +25,29 @@ const pageViewDocument = {
             `);
     },
     init: async function () {
-        const { data } = await this.getData();
-        if (data) {
-            this.update(data);
+        try {
+            const { data } = await this.getData();
+            if (data) {
+                this.update(data);
+            }
+        } catch (error) {
+            this.error(error);
         }
     },
     getId: function () {
         const url = window.location.href;
         const id = url.substring(url.lastIndexOf("/") + 1);
         return id;
+    },
+    error: function (error) {
+        const documentView = this.elements.documentView;
+        documentView.html(`
+            <div class="alert alert-danger">
+                <strong>
+                ${error?.message || "Không thể tải tài liệu này"}
+                </strong>
+            </div>
+        `);
     },
 };
 

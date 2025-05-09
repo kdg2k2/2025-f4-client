@@ -10,7 +10,7 @@
                     <div class="col-md-12 text-center">
                         <div class="">
                             <p class="mb-3 content-1 h5 text-white text-center">Tài liệu</p>
-                            <p class="mb-0 tx-26 text-center">Tất cả tài liệu về: {tên category}</p>
+                            <p class="mb-0 tx-26 text-center">Tất cả tài liệu về: {{$documentField['name']}}</p>
                         </div>
                     </div>
                 </div>
@@ -25,42 +25,28 @@
                         <div class="card shadow-none mb-0">
                             <div class="card-body p-0">
                                 <div class="table-responsive border br-7">
-                                    <table class="table table-bordered mb-0 table-hover border-hidden">
+                                    <table id="table" class="table table-bordered mb-0 table-hover border-hidden">
                                         <thead>
-                                        <tr>
-                                            <th>TT</th>
-                                            <th>Loại tài liệu</th>
-                                            <th>Tên tài liệu</th>
-                                            <th>Hành động</th>
-                                        </tr>
+                                            <tr>
+                                                <th>TT</th>
+                                                <th>Loại tài liệu</th>
+                                                <th>Tên tài liệu</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>TT</td>
-                                            <td>Name</td>
-                                            <td>Email</td>
-                                            <td>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>TT</td>
-                                            <td>Name</td>
-                                            <td>Email</td>
-                                            <td>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>TT</td>
-                                            <td>Name</td>
-                                            <td>Email</td>
-                                            <td>
-
-                                            </td>
-                                        </tr>
+                                            @foreach ($data as $i => $item)
+                                                <tr>
+                                                    <td>{{$i + 1}}</td>
+                                                    <td>
+                                                        {{$item['type']['name']}}
+                                                    </td>
+                                                    <td>
+                                                        <a href="/admin/documents" class="text-primary">
+                                                            {{$item['title']}}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -71,4 +57,38 @@
             </div>
         </section>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        // $(document).ready(function () {
+        //     $('#table').DataTable({
+        //         processing: true,
+        //         responsive: true,
+        //         lengthChange: true,
+        //         autoWidth: false,
+        //         ordering: false,
+        //         searching: false,
+        //         lengthMenu: [
+        //             [10, 50, 100],
+        //             [10, 50, 100],
+        //         ],
+        //         bLengthChange: true,
+        //         language: {
+        //             sLengthMenu: "Hiển thị _MENU_ bản ghi",
+        //             searchPlaceholder: "Nhập từ khóa...",
+        //             info: "Từ _START_ đến _END_ | Tổng số _TOTAL_",
+        //             sInfoEmpty: "Không có dữ liệu",
+        //             sEmptyTable: "Không có dữ liệu",
+        //             sSearch: "Tìm kiếm",
+        //             sZeroRecords: "Không tìm thấy dữ liệu phù hợp",
+        //             sInfoFiltered: "",
+        //             paginate: {
+        //                 previous: '<i class="fal fa-angle-left"></i>',
+        //                 next: '<i class="fal fa-angle-right"></i>',
+        //             },
+        //         },
+        //     });
+        // });
+    </script>
 @endsection

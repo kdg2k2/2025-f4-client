@@ -58,4 +58,11 @@ class OrderRepository
     {
         return Order::find($int);
     }
+
+    public function totalOrderPaid(array $status, int $idUser)
+    {
+        return Order::whereIn('status', $status)
+            // ->where('user_id', $idUser)
+            ->sum('total_amount');
+    }
 }

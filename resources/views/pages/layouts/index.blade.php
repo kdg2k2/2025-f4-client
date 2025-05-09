@@ -18,6 +18,8 @@
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kdg2k2/FontAwesome_6_Pro@main/css/all.min.css">
     <link rel="stylesheet" href="asset/js/nostfly-main/nostfly.css">
+    <link rel="stylesheet" href="asset/js/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="asset/js/datatables/datatables-responsive/css/responsive.bootstrap4.min.css">
     @yield('header')
 </head>
 
@@ -46,6 +48,9 @@
     <script src="assets/js/layout.js"></script>
     <script src="\template-admin\admin\js\user\index.js"></script>
     <script src="assets/js/checklogin.js"></script>
+    <script src="asset/js/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="asset/js/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="asset/js/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
     @yield('js')
 </body>
 

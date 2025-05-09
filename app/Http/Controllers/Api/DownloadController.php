@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Services\DocumentDownloadService;
 use App\Services\DocumentService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class DownloadController extends Controller
 {
@@ -24,26 +27,38 @@ class DownloadController extends Controller
             $orderCode = $request->orderCode;
 
             $documentDownload = $this->documentDownloadService->getByCode($code, $userId, $orderCode);
-            $originalPath = storage_path("app/public/{$documentDownload->document->path}");
 
-            // Tạo đường dẫn tạm
-            $tempFilename = uniqid('temp_') . '_' . basename($documentDownload->document->path);
-            $tempPath = storage_path("app/temp_downloads/{$tempFilename}");
+            $response = Http::get('http://127.0.0.1:8001/api/document/download', [
+                'document_id' => $documentDownload->id
+            ]);
 
+            $realUrl = $response->json(); // giả sử trả về string URL
 
-            // Đảm bảo thư mục tồn tại
-            if (!file_exists(dirname($tempPath))) {
-                mkdir(dirname($tempPath), 0755, true);
-            }
+            // Tạo token tạm
+            $tempToken = Str::uuid()->toString();
 
-            // Copy file sang đường dẫn tạm
-            copy($originalPath, $tempPath);
+            // Lưu vào cache trong 5 phút
+            Cache::put("temp_download_{$tempToken}", $realUrl, now()->addMinutes(1));
 
-            // Tăng lượt tải xuống
-            $this->documentService->incrementDownloadCount($documentDownload->document_id);
-            // Trả file tạm về client
-            return response()->download($tempPath)->deleteFileAfterSend(true);
+            // Trả về link tạm
+            return redirect()->route('tempDownload', ['token' => $tempToken]);
         });
+    }
+
+    public function tempDownload($token)
+    {
+        $url = Cache::get("temp_download_{$token}");
+        if (!$url) {
+            return response()->json(['message' => 'Link expired or invalid'], 404);
+        }
+
+        // Tải file từ URL thật
+        $fileResponse = Http::get($url);
+        $filename = basename(parse_url($url, PHP_URL_PATH));
+
+        return response($fileResponse->body(), 200)
+            ->header('Content-Type', $fileResponse->header('Content-Type') ?? 'application/octet-stream')
+            ->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
     }
 
 }
