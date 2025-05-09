@@ -41,7 +41,7 @@
                 <i class="fa-solid fa-thumbtack"></i>
                 <a class="sidebar-link" href="{{ route('admin.orders.index') }}">
                     <svg class="stroke-icon">
-                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Document"></use>
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Bag"></use>
                     </svg>
                     <h6 class="f-w-600">Đơn hàng</h6>
                 </a>
@@ -56,7 +56,7 @@
                 <i class="fa-solid fa-thumbtack"></i>
                 <a class="sidebar-link" href="{{ route('admin.upgrate.index') }}">
                     <svg class="stroke-icon">
-                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Document"></use>
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Ticket-star"></use>
                     </svg>
                     <h6 class="f-w-600">Nâng cấp gói tài khoản</h6>
                 </a>
