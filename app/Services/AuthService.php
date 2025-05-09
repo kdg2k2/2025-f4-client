@@ -32,8 +32,8 @@ class AuthService extends BaseService
     public function login(array $request)
     {
         return $this->tryThrow(function () use ($request) {
-            $credentials = array_merge($request, ['verified_at' => true]);
-            if (!$token = auth('api')->attempt($credentials))
+            // $credentials = array_merge($request, ['verified_at' => true]);
+            if (!$token = auth('api')->attempt($request))
                 throw new Exception('Đăng nhập không thành công', 401);
             return $this->createNewToken($token, $this->createRefreshToken());
         });
