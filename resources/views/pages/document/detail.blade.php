@@ -10,7 +10,7 @@
                     <div class="col-md-12 text-center">
                         <div class="">
                             <p class="mb-3 content-1 h5 text-white text-center">Tài liệu</p>
-                            <p class="mb-0 tx-26 text-center">Tất cả tài liệu về: {{$documentField['name']}}</p>
+                            <p class="mb-0 tx-16 text-center">Tất cả tài liệu về: {{$documentField['name']}}</p>
                         </div>
                     </div>
                 </div>

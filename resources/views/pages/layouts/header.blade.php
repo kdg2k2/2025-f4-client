@@ -9,11 +9,10 @@
             </ul>
             <ul class="nav list-unstyled align-items-center">
                 <li>
-                    <a href="terms-of-service" class="nav-link"><i class="bi bi-person me-2"></i>Điều khoản</a>
+                    <a href="terms-of-service" class="nav-link"><i class="bi bi-shield-check me-2"></i>Điều khoản</a>
                 </li>
                 <li>
-                    <a href="privacy-policy" class="nav-link d-flex"><i class="bi bi-shield-check me-2"></i>Chính
-                        sách</a>
+                    <a href="vnpay-payment-instructions" class="nav-link"><i class="bi bi-credit-card-2-front me-2"></i>Hướng dẫn thanh toán VNPAY</a>
                 </li>
                 <li>
                     <a href="faq" class="nav-link d-flex"><i class="bi bi-question-circle me-2"></i>Câu hỏi thường
@@ -47,8 +46,8 @@
                             <i class="bi bi-telephone text-white"></i>
                         </span>
                         <div class="d-none d-md-block">
-                            <a href="tel:02462920379" class="nav-link tx-15 p-0">Liên hệ</a>
-                            <a href="tel:02462920379" class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">0246.292.0379</a>
+                            <a href="tel:0936468342" class="nav-link tx-15 p-0">Liên hệ</a>
+                            <a href="tel:0936468342" class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">0936.468.342</a>
                         </div>
                     </li>
                     <li class="d-flex align-items-center position-relative">
@@ -440,7 +439,7 @@
                         </li> --}}
 
                         <li class="slide">
-                            <a href="#pricing" class="side-menu__item">
+                            <a href="/#pricing" class="side-menu__item">
                                 <span class="side-menu__label">Bảng giá</span>
                             </a>
                         </li>

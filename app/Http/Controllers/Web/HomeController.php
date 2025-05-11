@@ -10,11 +10,13 @@ class HomeController extends Controller
 {
     protected $documentService;
     protected $documentFieldService;
+
     public function __construct()
     {
         $this->documentService = app(DocumentService::class);
         $this->documentFieldService = app(DocumentFieldService::class);
     }
+
     public function index()
     {
         return view('pages.index');
@@ -30,9 +32,19 @@ class HomeController extends Controller
         return view('pages.support.privacy');
     }
 
+    public function getPaymentPrivacy()
+    {
+        return view('pages.support.PaymentPolicy');
+    }
+
     public function getFAQ()
     {
         return view('pages.support.faq');
+    }
+
+    public function getPaymentVNPAY()
+    {
+        return view('pages.support.vnpay');
     }
 
     public function getDocument()
@@ -71,5 +83,22 @@ class HomeController extends Controller
     public function getRegister()
     {
         return view('pages.auth.register');
+    }
+
+    public function getNotificationDetail($slug)
+    {
+        if ($slug == 'thong-bao-lich-nghi-le-ngay-30-4-va-ngay-1-5') {
+            return view('pages.notification.nghile1');
+        }
+
+        if ($slug == 'thong-bao-lich-nghi-le-gio-to-hung-vuong') {
+            return view('pages.notification.nghile2');
+        }
+
+        if ($slug == 'thong-bao-lich-nghi-tet-duong-lich-nam-2025') {
+            return view('pages.notification.nghile3');
+        }
+
+        return abort(404);
     }
 }

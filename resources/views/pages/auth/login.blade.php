@@ -40,7 +40,7 @@
                                                     <label class="mb-2 fw-500">Email<span
                                                             class="tx-danger ms-1">*</span></label>
                                                     <input name="email" class="form-control ms-0" type="email"
-                                                        placeholder="Enter your Email">
+                                                        placeholder="Nhập email">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
@@ -49,7 +49,7 @@
                                                             class="tx-danger ms-1">*</span></label>
                                                     <div class="input-group">
                                                         <input name="password" class="form-control ms-0 border-end-0"
-                                                            type="password" placeholder="Enter your Password"
+                                                            type="password" placeholder="Nhập mật khẩu"
                                                             id="password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted"> <i

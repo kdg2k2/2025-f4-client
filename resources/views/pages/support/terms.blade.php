@@ -18,282 +18,59 @@
         </section>
         <section class="section">
             <div class="container">
-                <div><h2>TERMS OF SERVICE:</h2>
-                    <p class="tx-muted">It is essential that you read this TOS prior to purchasing any Service(s) from
-                        the company.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Additional Policies and Agreements</h3>
-                    <ol>
-                        <li> Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                            invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.
-                            <ol class="mt-2" style="list-style:upper-alpha">
-                                <li class="mb-2"><a href="#">Privacy Notice</a></li>
-                                <li class="mb-2"><a href="#">Acceptable Use Policy</a></li>
-                                <li class="mb-2"><a href="#">Copyright Infringement Policy</a></li>
-                            </ol>
-                        </li>
-                        <li>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                            consetetur duo takimata ut, ea dolor.
-                        </li>
-                    </ol>
-                    <h3>Account Eligibility</h3>
-                    <ol>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                    </ol>
-                    <h3>Transfers</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Content</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Compliance with Applicable Law.</h3>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <h3>Third Party Products and Services</h3>
-                    <ol>
-                        <li><h6>Third Party Providers</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Reseller or Licensor</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Third Party Websites</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Prohibited Persons (Countries, Entities, And Individuals).</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Account Security</h3>
-                    <ol style="list-style: upper-alpha;">
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>HIPAA Disclaimer</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Compatibility with the Services</h3>
-                    <ol style="list-style: upper-alpha;">
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Billing and Payment Information</h3>
-                    <ol>
-                        <li><h6>Prepayment</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Autorenewal</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Taxes</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Late Payment</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Domain Payments.</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Fraud</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><h6>Invoice Disputes.</h6>
-                            <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Money-Back Guarantee and Refund Policy.</h3>
-                    <ol>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Resource Usage</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Uptime Guarantee.</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Store</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>WordPress Plugins.</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Coupons</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Limitation of Liability</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Indemnification</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Arbitration</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Independent Contractor</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Disclaimer</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p class="mb-0">Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                        consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet
-                        amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur
-                        consetetur ipsum.</p></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body pt-3">
+                                <p>Khi truy cập và sử dụng website <strong>Hệ thống dịch vụ Forestry 4.0</strong>, bạn đồng ý với các
+                                    điều khoản dưới đây. Vui lòng đọc kỹ trước khi sử dụng dịch vụ của chúng tôi.</p>
+
+                                <h3>1. Mục đích sử dụng</h3>
+                                <p>Website cung cấp tài liệu học tập, tài liệu tham khảo và các nội dung số cho mục đích
+                                    cá nhân, nghiên cứu, và học tập. Người dùng không được phép sử dụng các tài liệu này
+                                    cho mục đích thương mại nếu chưa có sự cho phép bằng văn bản từ chúng tôi.</p>
+
+                                <h3>2. Quyền sở hữu trí tuệ</h3>
+                                <p>Tất cả tài liệu trên website thuộc sở hữu của <strong>Công ty TNHH MTV Tân Mai Xanh</strong>
+                                    hoặc bên cung cấp hợp pháp. Người dùng không được sao chép, phân phối, bán lại hoặc
+                                    chỉnh sửa nội dung dưới bất kỳ hình thức nào mà không có sự đồng ý.</p>
+
+                                <h3>3. Tài khoản người dùng</h3>
+                                <ul>
+                                    <li>Người dùng chịu trách nhiệm bảo mật tài khoản và mật khẩu của mình.</li>
+                                    <li>Không được chia sẻ tài khoản cho người khác sử dụng.</li>
+                                    <li>Mọi hoạt động phát sinh từ tài khoản của bạn sẽ do bạn hoàn toàn chịu trách
+                                        nhiệm.
+                                    </li>
+                                </ul>
+
+                                <h3>4. Thanh toán & hoàn tiền</h3>
+                                <ul>
+                                    <li>Mọi giao dịch thanh toán trên website là hợp lệ nếu thực hiện qua hệ thống được
+                                        tích hợp sẵn.
+                                    </li>
+                                    <li>Do tính chất là sản phẩm số, <strong>Hệ thống dịch vụ Forestry 4.0</strong> <strong> không áp
+                                            dụng chính sách hoàn tiền</strong> sau khi giao dịch hoàn tất, trừ khi xảy
+                                        ra lỗi kỹ thuật từ hệ thống của chúng tôi.
+                                    </li>
+                                </ul>
+
+                                <h3>5. Trách nhiệm & giới hạn</h3>
+                                <p>Chúng tôi không chịu trách nhiệm nếu người dùng sử dụng tài liệu sai mục đích hoặc vi
+                                    phạm pháp luật. Website có quyền tạm dừng hoặc chấm dứt tài khoản của người dùng nếu
+                                    phát hiện hành vi gian lận, lạm dụng hoặc gây ảnh hưởng đến hệ thống.</p>
+
+                                <h3>6. Thay đổi điều khoản</h3>
+                                <p><strong>Hệ thống dịch vụ Forestry 4.0</strong> có quyền thay đổi nội dung điều khoản sử dụng bất kỳ
+                                    lúc nào. Mọi thay đổi sẽ được thông báo trên website. Việc tiếp tục sử dụng dịch vụ
+                                    sau khi điều khoản được cập nhật đồng nghĩa với việc bạn chấp nhận các thay đổi đó.
+                                </p>
+
+                                <p style="margin-top: 30px;"><strong>Trân trọng,</strong><br><strong>Hệ thống dịch vụ Forestry 4.0</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

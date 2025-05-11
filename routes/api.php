@@ -75,6 +75,7 @@ Route::middleware("api")->group(function () {
             Route::get("/list", "index");
             Route::get("/{orderCode}", "show");
             Route::get("/{orderCode}/status/payment", "paymentStatus");
+            Route::post('/{orderCode}/repay', 'repay');
         });
 
         Route::prefix("download")->controller(DownloadController::class)->group(function () {

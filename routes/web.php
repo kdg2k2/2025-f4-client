@@ -12,13 +12,24 @@ use App\Http\Controllers\Web\HomeController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
+
+    # chính sách
     Route::get('/terms-of-service', 'getTerms');
     Route::get('/privacy-policy', 'getPrivacy');
     Route::get('/faq', 'getFAQ');
+    Route::get('/payment-policy', 'getPaymentPrivacy');
+    Route::get('/vnpay-payment-instructions', 'getPaymentVNPAY');
+
+    # tài liệu
     Route::get('/document', 'getDocument');
     Route::get('/document/{id}', 'getDocumentDetail');
+
+    # bản đồ
     Route::get('/maps', 'getMaps');
     Route::get('/maps/index', 'getMapsDetail');
+
+    # Chi tiết thông báo
+    Route::get('/thong-bao/{slug}', 'getNotificationDetail');
 });
 
 Route::controller(AuthController::class)->group(function () {
