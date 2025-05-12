@@ -26,4 +26,14 @@ class DocumentFieldService extends BaseService
             return $this->documentFieldRepository->getField($id);
         });
     }
+
+    public function getAll()
+    {
+        return $this->documentFieldRepository->getAll();
+    }
+
+    public function getIdBySlug($slug)
+    {
+        return $this->documentFieldRepository->getIdBySlug($slug);
+    }
 }

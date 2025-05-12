@@ -52,13 +52,19 @@ class HomeController extends Controller
         return view('pages.document.index');
     }
 
-    public function getDocumentDetail($id)
+    public function getDocumentDetail($slug)
     {
-        $data = $this->documentService->list([
+        $documentField = $this->documentFieldService->getIdBySlug($slug);
+        if(isset($documentField)) {
+            $idDocumentField = $documentField->id;
+            $data = $this->documentService->list([
             "paginate" => 0,
-            'field_id' => $id,
+            'field_id' => $idDocumentField,
         ]);
-        $documentField = $this->documentFieldService->getField($id);
+        } else {
+            $data = [];
+        }
+
         return view('pages.document.detail', [
             'data' => $data,
             'documentField' => $documentField,

@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Xanh - Vì Cộng Đồng</title>
-
+    @yield('header')
     <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="style">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/libs/@simonwep/pickr/themes/classic.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <link href="assets/libs/@simonwep/pickr/themes/nano.min.css" rel="stylesheet">
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
-    @yield('header')
+
 </head>
 
 <body class="main-body light-theme">

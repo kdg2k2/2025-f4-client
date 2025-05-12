@@ -15,4 +15,13 @@ class DocumentFieldRepository
     {
         return DocumentField::where("id", $id)->first();
     }
+
+    public function getAll()
+    {
+        return DocumentField::all();
+    }
+
+    public function getIdBySlug($slug) {
+        return DocumentField::where("slug", $slug)->first();
+    }
 }

@@ -11,4 +11,14 @@ class DashboardController extends Controller
     {
         return view('admin.dashboard.index');
     }
+
+    public function FAQ()
+    {
+        return view('admin1.support.faq');
+    }
+
+    public function PaymentVNPAY()
+    {
+        return view('admin1.support.paymentVNPAY');
+    }
 }

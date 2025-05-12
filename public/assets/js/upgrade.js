@@ -9,15 +9,15 @@ btnUpgrades.on("click", async function (e) {
         if (user.isEmpty(user.getAll()))
             return (window.location.href = "/login");
         if (id === "1" && !user.isEmpty(user.getAll()))
-            return (window.location.href = "/admin");
+            return (window.location.href = "/admin/dashboard");
         const { data } = await http.post("api/upgrade/payment", {
             package_id: id,
         });
         if (data) {
             window.location.href = data;
+            $(this).prop("disabled", false);
         }
     } catch (error) {
         $(this).prop("disabled", false);
-
     }
 });

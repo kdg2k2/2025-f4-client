@@ -31,11 +31,12 @@ const getDocuments = (param) => {
             {
                 data: "actions",
                 title: "Hành động",
+                width: '100px'
             },
         ],
         (item) => {
             const btnView = `<a href="/admin/documents/${item.id}" title="Xem" class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>`;
-            const btnAddCart = `<span data-id="${item.id}" title="Thêm vào giỏ hàng" class="btn btn-sm btn-outline-primary rounded-pill btn-add-cart" data-bs-toggle="tooltip" data-placement="top"><i class="fal fa-cart-plus"></i></span>`;
+            const btnAddCart = `<span data-id="${item.id}" title="Thêm vào giỏ hàng" class="btn btn-sm btn-primary btn-add-cart" data-bs-toggle="tooltip" data-placement="top"><i class="fal fa-cart-plus"></i></span>`;
             const btnBuy = `<a href="${paymentUrl}?id=${item.id}" title="Mua tài liệu" class="btn btn-sm btn-outline-success rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fal fa-money-bill-alt"></i></a>`;
             return {
                 title: item.title ?? "",
@@ -44,7 +45,7 @@ const getDocuments = (param) => {
                 author: item.author ?? "",
                 price: formatNumber(item.price) ?? "",
                 download_count: item.download_count ?? "",
-                actions: `<div class="text-center">${btnAddCart} ${btnView}</div>`,
+                actions: `<div class="text-center">${btnAddCart}</div>`,
             };
         },
         param

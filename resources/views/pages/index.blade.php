@@ -553,5 +553,9 @@
     </div>
 @endsection
 @section('js')
-{{--    <script src="assets/js/upgrade.js"></script>--}}
+    <script src="\template-admin\admin\js\vendors\jquery\jquery.min.js"></script>
+    <script src="\template-admin\admin\js\user\index.js"></script>
+    <script src="\asset\js\loading.js"></script>
+   <script src="\asset\js\fetch.js"></script>
+   <script src="assets/js/upgrade.js"></script>
 @endsection

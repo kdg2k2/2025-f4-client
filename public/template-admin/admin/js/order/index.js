@@ -50,6 +50,7 @@ const orders = {
                 {
                     data: "actions",
                     title: "Hành động",
+                    width: '100px'
                 },
             ],
             (item, i) => {
@@ -63,8 +64,8 @@ const orders = {
                             </span></div>`,
                     actions: `
                         <div class="text-center">
-                            <a href="/admin/orders/${item.order_code}" title="Xem" class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>
-                            ${(item.status === 'pending' || item.status === 'cancelled') ? `<a data-order-code="${item.order_code}" title="Thanh toán" class="btn-repay btn btn-sm btn-outline-success rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-credit-card"></i></a>` : ''}
+                            <a href="/admin/orders/${item.order_code}" title="Xem" class="btn btn-sm btn-info" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>
+                            ${(item.status === 'pending' || item.status === 'cancelled') ? `<a data-order-code="${item.order_code}" title="Thanh toán" class="btn-repay btn btn-sm btn-warning" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-credit-card"></i></a>` : ''}
                         </div>`,
                 };
             },

@@ -106,7 +106,7 @@
     <script src="\template-admin\admin\js\user\index.js"></script>
     <script>
         const redirect = () => {
-            window.location.href = '/admin';
+            window.location.href = '/admin/dashboard';
         }
 
         const loginForm = document.querySelector('form.theme-form');
