@@ -49,8 +49,7 @@
                                                             class="tx-danger ms-1">*</span></label>
                                                     <div class="input-group">
                                                         <input name="password" class="form-control ms-0 border-end-0"
-                                                            type="password" placeholder="Nhập mật khẩu"
-                                                            id="password">
+                                                            type="password" placeholder="Nhập mật khẩu" id="password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted"> <i
                                                                 class="fe fe-eye tx-muted op-7" id="showPassword"></i>
@@ -118,8 +117,8 @@
 
             apiRequest('post', '/api/auth/login', {
                 email,
-                password
-            }, csrf)
+                password,
+            }, csrf, true, { alertErr: true })
                 .then(data => {
                     user.setAll(data.user);
                     // localStorage.setItem('user', JSON.stringify(data.user))

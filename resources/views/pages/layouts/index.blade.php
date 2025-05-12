@@ -16,7 +16,7 @@
     <link href="assets/libs/@simonwep/pickr/themes/nano.min.css" rel="stylesheet">
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="\template-admin\css\notify.css">
 </head>
 
 <body class="main-body light-theme">
@@ -36,6 +36,13 @@
     <script src="assets/js/countdown.js"></script>
     <script src="assets/js/sticky.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="\template-admin\admin\js\vendors\jquery\jquery.min.js"></script>
+    <script src="\template-admin\admin\js\user\index.js"></script>
+    <script src="\assets\js\checklogin.js"></script>
+    <script src="\asset\js\loading.js"></script>
+    <script src="\template-admin\js\notify.js"></script>
+    <script src="\template-admin\js\use-notify.js"></script>
+    <script src="\asset\js\fetch.js"></script>
     @yield('js')
 </body>
 

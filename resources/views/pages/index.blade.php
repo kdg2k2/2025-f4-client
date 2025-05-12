@@ -17,20 +17,24 @@
                                 <div class="col-lg-7">
                                     <div class="mb-4">
                                         <h1 class="content-1 text-white">Miễn phí tải các loại tài liệu</h1>
-                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói miễn phí để quý khách có thể tải xuống tài liệu mong muốn</p>
+                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói miễn phí để quý khách có thể
+                                            tải xuống tài liệu mong muốn</p>
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Đăng ký xong có ngay 3 lượt tải tài liệu
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Đăng
+                                                ký xong có ngay 3 lượt tải tài liệu
                                             </li>
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Mỗi tháng hỗ trợ 3 lượt tải miễn phí
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Mỗi
+                                                tháng hỗ trợ 3 lượt tải miễn phí
                                             </li>
                                             <li class="list-item mb-3">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ 24/7 nếu có vấn đề không mong muốn
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ
+                                                24/7 nếu có vấn đề không mong muốn
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="register" class="btn btn-secondary me-2">
+                                    <a data-href="1" href="#" class="btn btn-secondary me-2 btn-upgrade">
                                         <i class="fe fe-shopping-cart me-2"></i> Đăng ký ngay
                                     </a>
 
@@ -48,20 +52,25 @@
                                 <div class="col-lg-6">
                                     <div class="mb-4">
                                         <h1 class="content-1 text-white">Tải tài liệu không giới hạn</h1>
-                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói tài khoản Chỉ Huy Chiến Lược Lâm Nghiệp dành cho các tổ chức có nhu cầu sử dụng dịch vụ lớn và thường xuyên</p>
+                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói tài khoản Chỉ Huy Chiến Lược
+                                            Lâm Nghiệp dành cho các tổ chức có nhu cầu sử dụng dịch vụ lớn và thường xuyên
+                                        </p>
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Không giới hạn lượt tải tài liệu
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Không
+                                                giới hạn lượt tải tài liệu
                                             </li>
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Chi phí đăng ký phù hợp với tất cả mọi người
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Chi
+                                                phí đăng ký phù hợp với tất cả mọi người
                                             </li>
                                             <li class="list-item mb-3">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ 24/7 nếu có vấn đề không mong muốn
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ
+                                                24/7 nếu có vấn đề không mong muốn
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="register" class="btn btn-secondary me-2">
+                                    <a data-id="4" class="btn btn-secondary me-2 btn-upgrade">
                                         <i class="fe fe-shopping-cart me-2"></i> Đăng ký ngay
                                     </a>
                                 </div>
@@ -423,7 +432,8 @@
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-ngay-30-4-va-ngay-1-5" class="tx-color-default">Thông báo lịch nghỉ lễ ngày 30/4 và ngày 1/5</a></h5>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-ngay-30-4-va-ngay-1-5"
+                                        class="tx-color-default">Thông báo lịch nghỉ lễ ngày 30/4 và ngày 1/5</a></h5>
                             </div>
                         </div>
                     </div>
@@ -438,7 +448,8 @@
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-gio-to-hung-vuong" class="tx-color-default">Thông báo lịch nghỉ lễ Giỗ Tổ Hùng Vương</a></h5>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-gio-to-hung-vuong"
+                                        class="tx-color-default">Thông báo lịch nghỉ lễ Giỗ Tổ Hùng Vương</a></h5>
                             </div>
                         </div>
                     </div>
@@ -453,7 +464,8 @@
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="thong-bao/thong-bao-lich-nghi-tet-duong-lich-nam-2025" class="tx-color-default">Thông báo lịch nghỉ Tết dương lịch năm 2025</a></h5>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-tet-duong-lich-nam-2025"
+                                        class="tx-color-default">Thông báo lịch nghỉ Tết dương lịch năm 2025</a></h5>
                             </div>
                         </div>
                     </div>
@@ -473,10 +485,12 @@
                         <p class="mb-3 op-8">Khách hàng sử dụng ứng dụng được hỗ trợ trên Android và IOS để trực tiếp
                             tải dữ liệu về điện thoại. Vui lòng truy cập vào liên kết dưới đây để tải ứng dụng đúng với
                             hệ điều hành mà bạn đang sử dụng.</p>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1" class="text-white">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1"
+                            class="text-white">
                             <img src="assets/images/icon/google-play.svg" />
                         </a>
-                        <a target="_blank" href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi" class="text-white">
+                        <a target="_blank" href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi"
+                            class="text-white">
                             <img src="assets/images/icon/app-store.svg" />
                         </a>
                     </div>
@@ -513,15 +527,18 @@
                                         <div class="card shadow-none mb-0">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <img src="https://management.xuanmaijsc.vn/user/IMG_20230123_200304.jpg" alt="img"
-                                                        class="avatar avatar-lg rounded-circle me-2">
+                                                    <img src="https://management.xuanmaijsc.vn/user/IMG_20230123_200304.jpg"
+                                                        alt="img" class="avatar avatar-lg rounded-circle me-2">
                                                     <div class="flex-grow-1">
                                                         <h6 class="mb-0 text-white">Nguyễn Văn Ánh</h6>
                                                         <span class="tx-13">10-05-2025</span>
                                                     </div>
                                                 </div>
                                                 <p class="mt-2 tx-14 mb-0">
-                                                    Kho tài liệu cực kỳ phong phú, từ sách học thuật, giáo trình cho đến tài liệu tham khảo hiếm. Có thể tìm thấy cả những nội dung mà các trang khác không có. Rất phù hợp cho học sinh, sinh viên, giảng viên và cả người đi làm. Dịch vụ thật sự đáng đồng tiền
+                                                    Kho tài liệu cực kỳ phong phú, từ sách học thuật, giáo trình cho đến tài
+                                                    liệu tham khảo hiếm. Có thể tìm thấy cả những nội dung mà các trang khác
+                                                    không có. Rất phù hợp cho học sinh, sinh viên, giảng viên và cả người đi
+                                                    làm. Dịch vụ thật sự đáng đồng tiền
                                                 </p>
                                             </div>
                                         </div>
@@ -538,7 +555,10 @@
                                                     </div>
                                                 </div>
                                                 <p class="mt-2 tx-14 mb-0">
-                                                    Dịch vụ hỗ trợ khách hàng làm việc rất chuyên nghiệp. Mình gặp chút trục trặc khi tải tài liệu, gửi mail thì được phản hồi ngay trong ngày. Nhân viên hướng dẫn tận tình, xử lý vấn đề nhanh chóng. Cảm thấy rất được tôn trọng và hỗ trợ.
+                                                    Dịch vụ hỗ trợ khách hàng làm việc rất chuyên nghiệp. Mình gặp chút trục
+                                                    trặc khi tải tài liệu, gửi mail thì được phản hồi ngay trong ngày. Nhân
+                                                    viên hướng dẫn tận tình, xử lý vấn đề nhanh chóng. Cảm thấy rất được tôn
+                                                    trọng và hỗ trợ.
                                                 </p>
                                             </div>
                                         </div>
@@ -553,9 +573,5 @@
     </div>
 @endsection
 @section('js')
-    <script src="\template-admin\admin\js\vendors\jquery\jquery.min.js"></script>
-    <script src="\template-admin\admin\js\user\index.js"></script>
-    <script src="\asset\js\loading.js"></script>
-   <script src="\asset\js\fetch.js"></script>
-   <script src="assets/js/upgrade.js"></script>
+    <script src="assets/js/upgrade.js"></script>
 @endsection
