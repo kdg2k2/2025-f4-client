@@ -16,34 +16,28 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="mb-4">
-                                        <h1 class="content-1 text-white">50% Off on Shared Hosting</h1>
-                                        <p class="mb-4 content-2 tx-18">Get Your Business Online In An Affordable
-                                            Way</p>
+                                        <h1 class="content-1 text-white">Miễn phí tải các loại tài liệu</h1>
+                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói miễn phí để quý khách có thể
+                                            tải xuống tài liệu mong muốn</p>
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Power
-                                                Packed With Features
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Đăng
+                                                ký xong có ngay 3 lượt tải tài liệu
                                             </li>
                                             <li class="list-item mb-2">
-                                                <i
-                                                    class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Versatile
-                                                On Applications
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Mỗi
+                                                tháng hỗ trợ 3 lượt tải miễn phí
                                             </li>
                                             <li class="list-item mb-3">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Money
-                                                Back Guarantee
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ
+                                                24/7 nếu có vấn đề không mong muốn
                                             </li>
                                         </ul>
-                                        <h2 class="text-white">Coupon Code : <span class="tx-warning">HTMSUNSHINE</span>
-                                        </h2>
                                     </div>
-                                    <a href="linux-shared-hosting.html" class="btn btn-secondary me-2">
-                                        <i class="fe fe-eye me-2"></i> View Plans
+                                    <a data-href="1" href="#" class="btn btn-secondary me-2 btn-upgrade">
+                                        <i class="fe fe-shopping-cart me-2"></i> Đăng ký ngay
                                     </a>
-                                    <a href="https://themeforest.net/item/hostma-hosting-html-whmcs-template/43364155"
-                                        class="btn btn-white">
-                                        <i class="fe fe-shopping-cart me-2"></i> Buynow
-                                    </a>
+
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="text-center mt-5 mt-md-0">
@@ -57,33 +51,27 @@
                             <div class="row align-items-stretch">
                                 <div class="col-lg-6">
                                     <div class="mb-4">
-                                        <h1 class="content-1 text-white">30% Off on Windows Hosting</h1>
-                                        <p class="mb-4 content-2 tx-18"> Get Your Business Online In An Affordable
-                                            Way </p>
-                                        <ul class="list-unstyled">
+                                        <h1 class="content-1 text-white">Tải tài liệu không giới hạn</h1>
+                                        <p class="mb-4 content-2 tx-18">Chúng tôi cung cấp gói tài khoản Chỉ Huy Chiến Lược
+                                            Lâm Nghiệp dành cho các tổ chức có nhu cầu sử dụng dịch vụ lớn và thường xuyên
+                                        </p>
+                                        <ul class="list-unstyled mb-0">
                                             <li class="list-item mb-2">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Power
-                                                Packed With Features
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Không
+                                                giới hạn lượt tải tài liệu
                                             </li>
                                             <li class="list-item mb-2">
-                                                <i
-                                                    class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Versatile
-                                                On Applications
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Chi
+                                                phí đăng ký phù hợp với tất cả mọi người
                                             </li>
-                                            <li class="list-item">
-                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Money
-                                                Back Guarantee
+                                            <li class="list-item mb-3">
+                                                <i class="fe fe-chevron-right bg-white-2 rounded-circle p-1 me-2"></i>Hỗ trợ
+                                                24/7 nếu có vấn đề không mong muốn
                                             </li>
                                         </ul>
-                                        <h2 class="text-white">Coupon Code : <span class="tx-warning">HTMSUNSHINE</span>
-                                        </h2>
                                     </div>
-                                    <a href="windows-shared-hosting.html" class="btn btn-secondary me-2">
-                                        <i class="fe fe-eye me-2"></i> View Plans
-                                    </a>
-                                    <a href="https://themeforest.net/item/hostma-hosting-html-whmcs-template/43364155"
-                                        class="btn btn-white">
-                                        <i class="fe fe-shopping-cart me-2"></i> Buynow
+                                    <a data-id="4" class="btn btn-secondary me-2 btn-upgrade">
+                                        <i class="fe fe-shopping-cart me-2"></i> Đăng ký ngay
                                     </a>
                                 </div>
                                 <div class="col-lg-6">
@@ -194,7 +182,7 @@
                                         <div class="d-flex align-items-center-start">
                                             <span class="me-2 tx-primary"><i class="bi bi-check-circle"></i></span>
                                             <span class="flex-grow-1">
-                                                Thêm 3 ượt tải tài liệu / tháng
+                                                Thêm 3 lượt tải tài liệu / tháng
                                             </span>
                                         </div>
                                     </li>
@@ -209,7 +197,7 @@
                                 </ul>
                                 <div class="d-grid">
                                     <button data-id="1" class="btn btn-primary-transparent btn-upgrade">
-                                        Dùng thử
+                                        Đăng ký
                                     </button>
                                 </div>
                             </div>
@@ -325,7 +313,7 @@
                                         <div class="d-flex align-items-center-start">
                                             <span class="me-2 tx-primary"><i class="bi bi-check-circle"></i></span>
                                             <span class="flex-grow-1">
-                                                không giới hạn lượt tải tài liệu
+                                                Không giới hạn lượt tải tài liệu
                                             </span>
                                         </div>
                                     </li>
@@ -437,18 +425,15 @@
                     <div class="col-lg-4">
                         <div class="card mb-lg-0">
                             <div class="position-relative">
-                                <a href="blog-details.html">
+                                <a href="thong-bao/thong-bao-lich-nghi-le-ngay-30-4-va-ngay-1-5">
                                     <img class="card-img-top" src="assets/images/blog/3.jpg" alt="blog-image">
                                 </a>
-                                <span class="badge bg-secondary blog-badge">Hosting</span>
+                                <span class="badge bg-success blog-badge">29-04-2025</span>
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="blog-details.html" class="tx-color-default">Starting a Web Hosting
-                                        Business</a></h5>
-                                <div class="tx-muted">To take a trivial example, which of us ever undertakes laborious
-                                    physical exerciser , except to obtain some advantage from it...
-                                </div>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-ngay-30-4-va-ngay-1-5"
+                                        class="tx-color-default">Thông báo lịch nghỉ lễ ngày 30/4 và ngày 1/5</a></h5>
                             </div>
                         </div>
                     </div>
@@ -456,18 +441,15 @@
                     <div class="col-lg-4">
                         <div class="card mb-lg-0">
                             <div class="position-relative">
-                                <a href="blog-details.html">
+                                <a href="thong-bao/thong-bao-lich-nghi-le-gio-to-hung-vuong">
                                     <img class="card-img-top" src="assets/images/blog/6.jpg" alt="blog-image">
                                 </a>
-                                <span class="badge bg-danger blog-badge">Hosting</span>
+                                <span class="badge bg-success blog-badge">04-04-2025</span>
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="blog-details.html" class="tx-color-default">Starting a Web Hosting
-                                        Business</a></h5>
-                                <div class="tx-muted">To take a trivial example, which of us ever undertakes laborious
-                                    physical exerciser , except to obtain some advantage from it...
-                                </div>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-le-gio-to-hung-vuong"
+                                        class="tx-color-default">Thông báo lịch nghỉ lễ Giỗ Tổ Hùng Vương</a></h5>
                             </div>
                         </div>
                     </div>
@@ -475,18 +457,15 @@
                     <div class="col-lg-4">
                         <div class="card mb-lg-0">
                             <div class="position-relative">
-                                <a href="blog-details.html">
+                                <a href="thong-bao/thong-bao-lich-nghi-tet-duong-lich-nam-2025">
                                     <img class="card-img-top" src="assets/images/blog/5.jpg" alt="blog-image">
                                 </a>
-                                <span class="badge bg-success blog-badge">Hosting</span>
+                                <span class="badge bg-success blog-badge">31-12-2024</span>
                             </div>
 
                             <div class="card-body d-flex flex-column">
-                                <h5><a href="blog-details.html" class="tx-color-default">Starting a Web Hosting
-                                        Business</a></h5>
-                                <div class="tx-muted">To take a trivial example, which of us ever undertakes laborious
-                                    physical exerciser , except to obtain some advantage from it...
-                                </div>
+                                <h5><a href="thong-bao/thong-bao-lich-nghi-tet-duong-lich-nam-2025"
+                                        class="tx-color-default">Thông báo lịch nghỉ Tết dương lịch năm 2025</a></h5>
                             </div>
                         </div>
                     </div>
@@ -506,10 +485,12 @@
                         <p class="mb-3 op-8">Khách hàng sử dụng ứng dụng được hỗ trợ trên Android và IOS để trực tiếp
                             tải dữ liệu về điện thoại. Vui lòng truy cập vào liên kết dưới đây để tải ứng dụng đúng với
                             hệ điều hành mà bạn đang sử dụng.</p>
-                        <a href="payment-options.html" class="text-white">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1"
+                            class="text-white">
                             <img src="assets/images/icon/google-play.svg" />
                         </a>
-                        <a href="payment-options.html" class="text-white">
+                        <a target="_blank" href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi"
+                            class="text-white">
                             <img src="assets/images/icon/app-store.svg" />
                         </a>
                     </div>
@@ -546,17 +527,18 @@
                                         <div class="card shadow-none mb-0">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <img src="assets/images/profile/1.jpg" alt="img"
-                                                        class="avatar avatar-lg rounded-circle me-2">
+                                                    <img src="https://management.xuanmaijsc.vn/user/IMG_20230123_200304.jpg"
+                                                        alt="img" class="avatar avatar-lg rounded-circle me-2">
                                                     <div class="flex-grow-1">
-                                                        <h6 class="mb-0 text-white">Dhaval Patel</h6>
-                                                        <span class="tx-11">12 Aug, 2022</span>
+                                                        <h6 class="mb-0 text-white">Nguyễn Văn Ánh</h6>
+                                                        <span class="tx-13">10-05-2025</span>
                                                     </div>
                                                 </div>
                                                 <p class="mt-2 tx-14 mb-0">
-                                                    Efficiently innovate customized growth
-                                                    strategies whereas error-free paradigms. Monotonectally enhance
-                                                    stand-alone data with prospective innovation.
+                                                    Kho tài liệu cực kỳ phong phú, từ sách học thuật, giáo trình cho đến tài
+                                                    liệu tham khảo hiếm. Có thể tìm thấy cả những nội dung mà các trang khác
+                                                    không có. Rất phù hợp cho học sinh, sinh viên, giảng viên và cả người đi
+                                                    làm. Dịch vụ thật sự đáng đồng tiền
                                                 </p>
                                             </div>
                                         </div>
@@ -565,17 +547,18 @@
                                         <div class="card shadow-none mb-0">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <img src="assets/images/profile/1.jpg" alt="img"
+                                                    <img src="https://management.xuanmaijsc.vn/user/lesyhoa.jpg" alt="img"
                                                         class="avatar avatar-lg rounded-circle me-2">
                                                     <div class="flex-grow-1">
-                                                        <h6 class="mb-0 text-white">Dhaval Patel</h6>
-                                                        <span class="tx-11">12 Aug, 2022</span>
+                                                        <h6 class="mb-0 text-white">Lê Sỹ Hòa</h6>
+                                                        <span class="tx-11">10-05-2025</span>
                                                     </div>
                                                 </div>
                                                 <p class="mt-2 tx-14 mb-0">
-                                                    Efficiently innovate customized growth
-                                                    strategies whereas error-free paradigms. Monotonectally enhance
-                                                    stand-alone data with prospective innovation.
+                                                    Dịch vụ hỗ trợ khách hàng làm việc rất chuyên nghiệp. Mình gặp chút trục
+                                                    trặc khi tải tài liệu, gửi mail thì được phản hồi ngay trong ngày. Nhân
+                                                    viên hướng dẫn tận tình, xử lý vấn đề nhanh chóng. Cảm thấy rất được tôn
+                                                    trọng và hỗ trợ.
                                                 </p>
                                             </div>
                                         </div>

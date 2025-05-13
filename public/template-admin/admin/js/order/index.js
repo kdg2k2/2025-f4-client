@@ -50,6 +50,7 @@ const orders = {
                 {
                     data: "actions",
                     title: "Hành động",
+                    width: '100px'
                 },
             ],
             (item, i) => {
@@ -63,7 +64,8 @@ const orders = {
                             </span></div>`,
                     actions: `
                         <div class="text-center">
-                            <a href="/admin/orders/${item.order_code}" title="Xem" class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>
+                            <a href="/admin/orders/${item.order_code}" title="Xem" class="btn btn-sm btn-info" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-eye"></i></a>
+                            ${(item.status === 'pending' || item.status === 'cancelled') ? `<a data-order-code="${item.order_code}" title="Thanh toán" class="btn-repay btn btn-sm btn-warning" data-bs-toggle="tooltip" data-placement="top"><i class="fa-solid fa-credit-card"></i></a>` : ''}
                         </div>`,
                 };
             },
@@ -77,4 +79,21 @@ const orders = {
 
 $(document).ready(function () {
     orders.init();
+    $(document).on('click', '.btn-repay', async function () {
+        const orderCode = $(this).data('order-code');
+        const btn = $(this);
+        btn.prop('disabled', true);
+        try {
+            const res = await http.post(`/api/order/${orderCode}/repay`);
+            if (res.data) {
+                window.location.href = res.data;
+            } else {
+                alertErr('Không lấy được link thanh toán.');
+            }
+        } catch (xhr) {
+            alertErr(xhr?.message || 'Có lỗi xảy ra!');
+        } finally {
+            btn.prop('disabled', false);
+        }
+    });
 });

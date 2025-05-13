@@ -31,6 +31,10 @@ class AuthController extends Controller
 
     public function verify($token)
     {
+        if (empty($token) || !is_string($token)) {
+            return redirect(route('login'))->with('err', 'Invalid token.');
+        }
+
         return view("pages.auth.verify", ['token' => $token]);
     }
 

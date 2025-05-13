@@ -17,7 +17,7 @@ const makeHttpRequest = (
     csrfToken = "",
     isLoading = true,
     config = {
-        alertErr: true,
+        alertErr: false,
     }
 ) => {
     return new Promise((resolve, reject) => {

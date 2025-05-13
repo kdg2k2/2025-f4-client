@@ -16,7 +16,8 @@ formRegister.on("submit", function (e) {
     const formData = new FormData(this);
     http.post("api/auth/register", formData)
         .then(({ message }) => {
-            alertSuccess(message);
+            // alertSuccess(message);
+            window.location.href = '/login';
         })
 });
 

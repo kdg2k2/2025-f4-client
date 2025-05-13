@@ -7,31 +7,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <a href="index.html" class="d-inline-block mb-3">
+                    <a href="/" class="d-inline-block mb-3">
                         <img class="logo" src="assets/images/brand/logo-white.png" alt="img">
                     </a>
-                    <ul class="list-unstyled mb-0">
-                        <li class="list-item mb-2">
-                            <a href="tel:02462920379" class="footer-link">
-                                <i class="bi bi-telephone me-3 tx-18"></i>0246.292.0379
-                            </a>
-                        </li>
-                        <li class="list-item mb-2">
-                            <a href="mailto:info@tanmaixanh.vn" class="footer-link">
-                                <i class="bi bi-envelope-plus me-3 tx-18"></i>info@tanmaixanh.vn
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="https://maps.app.goo.gl/84CTJyriW2BuEvWD6" class="footer-link">
-                                <i class="bi bi-geo-alt me-3 tx-18"></i>Số 12, Ngõ 29, Mai Trai, Trung Hưng, Sơn Tây, Hà
-                                Nội
-                            </a>
-                        </li>
-                    </ul>
+                    <p class="mb-4 fw-bold"> Công ty TNHH MTV Tân Mai Xanh</p>
+                    <p class="mb-1">Mã số thuế: 0110945808</p>
+                    <p class="mb-1">Cấp ngày: 23/01/2025 tại Phòng đăng ký kinh doanh Sở Kế hoạch và Đầu tư Thành phố Hà Nội</p>
+                    <p>Đại diện: Ông Kiều Đăng Anh</p>
+
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h4 class="text-white">Chức năng</h4>
                     <ul class="list-unstyled footer-icon">
+                        <li class="list-item mb-2">
+                            <a href="/" class="footer-link">Trang chủ</a>
+                        </li>
                         <li class="list-item mb-2">
                             <a href="document" class="footer-link">Tài liệu</a>
                         </li>
@@ -50,16 +40,16 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h4 class="text-white">Công ty</h4>
+                    <h4 class="text-white">Hỗ trợ</h4>
                     <ul class="list-unstyled footer-icon">
                         <li class="list-item mb-2">
-                            <a href="about" class="footer-link">Giới thiệu</a>
-                        </li>
-                        <li class="list-item mb-2">
-                            <a href="terms-of-service" class="footer-link">Điều khoản</a>
+                            <a href="terms-of-service" class="footer-link">Điều khoản sử dụng</a>
                         </li>
                         <li class="list-item mb-2">
                             <a href="privacy-policy" class="footer-link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="list-item mb-2">
+                            <a href="payment-policy" class="footer-link">Chính sách thanh toán</a>
                         </li>
                         <li class="list-item mb-2">
                             <a href="faq" class="footer-link">Câu hỏi thường gặp</a>
@@ -67,16 +57,29 @@
                         <li class="list-item mb-2">
                             <a href="instructions" class="footer-link">Hướng dẫn sử dụng</a>
                         </li>
+                        <li class="list-item mb-2">
+                            <a href="vnpay-payment-instructions" class="footer-link">Hướng dẫn thanh toán VNPAY</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                    <h4 class="text-white">Liên kết</h4>
-                    <ul class="list-unstyled footer-icon">
+                    <h4 class="text-white">Thông tin liên hệ</h4>
+                    <ul class="list-unstyled mb-0">
                         <li class="list-item mb-2">
-                            <a target="_blank" href="https://ifee.edu.vn/" class="footer-link">Viện Sinh thái rừng và Môi trường</a>
+                            <a href="tel:0936468342" class="footer-link">
+                                <i class="bi bi-telephone me-3 tx-18"></i>0936.468.342
+                            </a>
                         </li>
                         <li class="list-item mb-2">
-                            <a target="_blank" href="https://xuanmaijsc.vn/" class="footer-link">CTy CPTM Công nghệ Xuân Mai Green</a>
+                            <a href="mailto:info@tanmaixanh.vn" class="footer-link">
+                                <i class="bi bi-envelope-plus me-3 tx-18"></i>info@tanmaixanh.vn
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://maps.app.goo.gl/84CTJyriW2BuEvWD6" class="footer-link">
+                                <i class="bi bi-geo-alt me-3 tx-18"></i>Số 12, Ngõ 29, Mai Trai, Trung Hưng, Sơn Tây, Hà
+                                Nội
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -90,12 +93,16 @@
                     <div class="d-md-flex align-items-center">
                         <p class="mb-0 me-3 text-white">Tải ứng dụng :</p>
                         <div class="mt-3 mt-md-0">
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1" class="text-white">
-                                <img src="assets/images/icon/google-play.svg" />
+                            <a target="_blank"
+                               href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1"
+                               class="text-white">
+                                <img src="assets/images/icon/google-play.svg"/>
                             </a>
-                            <a target="_blank" href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi" class="text-white">
-                                <img src="assets/images/icon/app-store.svg" />
+                            <a target="_blank" href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi"
+                               class="text-white">
+                                <img src="assets/images/icon/app-store.svg"/>
                             </a>
+
                         </div>
                     </div>
                 </div>

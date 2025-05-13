@@ -9,10 +9,10 @@
     <title>{{ env('APP_NAME') }}</title>
     <base href="{{ asset('') }}">
     <link rel="icon" type="image/x-icon" href="{{ env('APP_LOGO') }}">
-
+    @yield('css')
     @include('admin.partials.base-style')
 
-    @yield('css')
+
 </head>
 
 <body>

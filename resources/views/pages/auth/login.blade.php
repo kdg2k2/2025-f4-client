@@ -40,7 +40,7 @@
                                                     <label class="mb-2 fw-500">Email<span
                                                             class="tx-danger ms-1">*</span></label>
                                                     <input name="email" class="form-control ms-0" type="email"
-                                                        placeholder="Enter your Email">
+                                                        placeholder="Nhập email">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
@@ -49,8 +49,7 @@
                                                             class="tx-danger ms-1">*</span></label>
                                                     <div class="input-group">
                                                         <input name="password" class="form-control ms-0 border-end-0"
-                                                            type="password" placeholder="Enter your Password"
-                                                            id="password">
+                                                            type="password" placeholder="Nhập mật khẩu" id="password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted"> <i
                                                                 class="fe fe-eye tx-muted op-7" id="showPassword"></i>
@@ -106,7 +105,7 @@
     <script src="\template-admin\admin\js\user\index.js"></script>
     <script>
         const redirect = () => {
-            window.location.href = '/admin';
+            window.location.href = '/admin/dashboard';
         }
 
         const loginForm = document.querySelector('form.theme-form');
@@ -118,8 +117,8 @@
 
             apiRequest('post', '/api/auth/login', {
                 email,
-                password
-            }, csrf)
+                password,
+            }, csrf, true, { alertErr: true })
                 .then(data => {
                     user.setAll(data.user);
                     // localStorage.setItem('user', JSON.stringify(data.user))

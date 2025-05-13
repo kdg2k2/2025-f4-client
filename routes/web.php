@@ -12,13 +12,23 @@ use App\Http\Controllers\Web\HomeController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
+
+    # chính sách
     Route::get('/terms-of-service', 'getTerms');
     Route::get('/privacy-policy', 'getPrivacy');
     Route::get('/faq', 'getFAQ');
-    Route::get('/document', 'getDocument');
-    Route::get('/document/{id}', 'getDocumentDetail');
+    Route::get('/payment-policy', 'getPaymentPrivacy');
+    Route::get('/vnpay-payment-instructions', 'getPaymentVNPAY');
+
+    # tài liệu
+    Route::get('/tai-lieu/{slug}', 'getDocumentDetail');
+
+    # bản đồ
     Route::get('/maps', 'getMaps');
     Route::get('/maps/index', 'getMapsDetail');
+
+    # Chi tiết thông báo
+    Route::get('/thong-bao/{slug}', 'getNotificationDetail');
 });
 
 Route::controller(AuthController::class)->group(function () {
@@ -36,7 +46,9 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get("", [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get("/dashboard", [DashboardController::class, 'index'])->name('dashboard');
+
     Route::prefix("documents")->controller(DocumentController::class)->group(function () {
         Route::get("/", "index")->name("document.index");
         Route::get("/{id}", "show")->name("document.show");
@@ -57,6 +69,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get("", "list")->name("orders.index");
         Route::get("{orderCode}", "show")->name("orders.show");
     });
+
+    Route::get("/faq", [DashboardController::class, 'FAQ'])->name('faq');
+    Route::get("/vnpay-payment-instructions", [DashboardController::class, 'PaymentVNPAY'])->name('PaymentVNPAY');
 });
 
 Route::prefix("vnpay")->controller(VnpayController::class)->group(function () {

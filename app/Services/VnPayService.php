@@ -33,24 +33,34 @@ class VnPayService extends BaseService
     public function createPayment(array $request)
     {
         return $this->tryThrow(function () use ($request) {
-            if (empty($request['return_url']))
-                throw new Exception('return_url is required');
-            if (filter_var($request['return_url'], FILTER_VALIDATE_URL) == false)
-                throw new Exception('return_url is not a valid url');
-
+            $url = $this->createPaymentForOrder($request);
             $payment = $this->paymentService->create([
                 'order_id' => $request['order_id'],
                 'vnp_TxnRef' => $request['order_code'],
                 'vnp_Amount' => $request['total_amount'],
                 'status' => 'pending',
             ]);
+            return [
+                'payment' => $payment,
+                'url' => $url,
+            ];
+        });
+    }
+
+    public function createPaymentForOrder(array $request)
+    {
+        return $this->tryThrow(function () use ($request) {
+            if (empty($request['return_url']))
+                throw new Exception('return_url is required');
+            if (filter_var($request['return_url'], FILTER_VALIDATE_URL) == false)
+                throw new Exception('return_url is not a valid url');
 
             $ipClient = $this->getClientIp();
             $nowDate = date('YmdHis');
             $data = [
                 'vnp_Version' => '2.1.0',
                 'vnp_TmnCode' => config('vnpay.vnp_TmnCode'),
-                'vnp_Amount' => $payment->vnp_Amount * 100,
+                'vnp_Amount' => $request['total_amount'] * 100,
                 'vnp_Command' => 'pay',
                 'vnp_CreateDate' => $nowDate,
                 'vnp_CurrCode' => 'VND',
@@ -59,7 +69,7 @@ class VnPayService extends BaseService
                 'vnp_OrderInfo' => $this->removeVietnameseAccent->stringToSlug($request['info']),
                 'vnp_OrderType' => $request['type'],
                 'vnp_ReturnUrl' => $request['return_url'],
-                'vnp_TxnRef' => $payment->vnp_TxnRef,
+                'vnp_TxnRef' => $request['order_code'],
                 'vnp_ExpireDate' => date('YmdHis', strtotime($nowDate . '+30 minutes')),
             ];
 
@@ -76,10 +86,7 @@ class VnPayService extends BaseService
             ]);
 
             Log::info("VNPAY PAYLOAD:" . $url);
-            return [
-                'payment' => $payment,
-                'url' => $url,
-            ];
+            return $url;
         });
     }
 

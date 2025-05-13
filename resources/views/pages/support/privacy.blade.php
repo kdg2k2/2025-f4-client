@@ -19,143 +19,35 @@
 
         <section class="section">
             <div class="container">
-                <div><h2>PRIVACY POLICY:</h2>
-                    <p class="tx-muted">It is essential that you read this TOS prior to purchasing any Service(s) from
-                        the company.</p>
-                    <p>Your privacy is very important to us, below explains the information we collect from you, what we
-                        do with that information and our information security policy.</p>
-                    <h3>Information Collected</h3>
-                    <ol>
-                        <li> Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                            invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.
-                            <ol class="mt-2" style="list-style:upper-alpha">
-                                <li class="mb-2"><a href="#">Privacy Notice</a></li>
-                                <li class="mb-2"><a href="#">Acceptable Use Policy</a></li>
-                                <li class="mb-2"><a href="#">Copyright Infringement Policy</a></li>
-                            </ol>
-                        </li>
-                        <li>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                            consetetur duo takimata ut, ea dolor.
-                        </li>
-                    </ol>
-                    <h3>Information Use</h3>
-                    <ol>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                        <li class="mb-2">Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos
-                            et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                            ipsum.Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                            consetetur consetetur ipsum.
-                        </li>
-                    </ol>
-                    <h3>Cookies</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Log Files</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Compliance with Applicable Law.</h3>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <p>Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est eos et est kasd,
-                        invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.Dolores est eos et
-                        est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur ipsum.</p>
-                    <h3>Surveys</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Third Party Disclosure</h3>
-                    <ol style="list-style: upper-alpha;">
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Storage and access of the data on our servers</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <h3>Sharing of Your Personal Information</h3>
-                    <ol style="list-style: upper-alpha;">
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Notifications of Changes</h3>
-                    <ol>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                        <li><p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                                consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod
-                                stet amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna
-                                consetetur consetetur ipsum.</p></li>
-                    </ol>
-                    <h3>Contacting Us</h3>
-                    <p>Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos consetetur duo
-                        takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet amet. Dolores est
-                        eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur consetetur
-                        ipsum.</p>
-                    <p class="mb-0">Invidunt erat elitr ut accusam amet ipsum lorem, elitr labore lorem sanctus no eos
-                        consetetur duo takimata ut, ea dolor. Justo aliquyam duo vero clita aliquyam vero eirmod stet
-                        amet. Dolores est eos et est kasd, invidunt aliquyam no sadipscing, et dolor magna consetetur
-                        consetetur ipsum.</p></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body pt-3">
+                                <p><strong>Hệ thống dịch vụ Forestry 4.0</strong> cam kết bảo vệ quyền riêng tư của người dùng. Chính sách bảo mật này sẽ giúp bạn hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn truy cập và sử dụng dịch vụ của chúng tôi.</p>
+
+                                <h3>1. Thông tin chúng tôi thu thập</h3>
+                                <p>Chúng tôi thu thập thông tin cá nhân bao gồm tên, email, số điện thoại, và thông tin thanh toán khi bạn đăng ký tài khoản hoặc thực hiện giao dịch trên website.</p>
+
+                                <h3>2. Cách sử dụng thông tin</h3>
+                                <p>Thông tin bạn cung cấp sẽ được sử dụng để xử lý đơn hàng, liên hệ với bạn về các sản phẩm và dịch vụ, cung cấp hỗ trợ khách hàng, và cải thiện trải nghiệm người dùng trên website.</p>
+
+                                <h3>3. Bảo mật thông tin</h3>
+                                <p>Chúng tôi sử dụng các biện pháp bảo mật hợp lý để bảo vệ thông tin cá nhân của bạn khỏi việc truy cập trái phép. Dữ liệu được lưu trữ trong các hệ thống bảo mật và chỉ những nhân viên được ủy quyền mới có quyền truy cập.</p>
+
+                                <h3>4. Chia sẻ thông tin</h3>
+                                <p>Chúng tôi không chia sẻ thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào trừ khi có sự đồng ý của bạn hoặc theo yêu cầu của pháp luật.</p>
+
+                                <h3>5. Quyền của bạn</h3>
+                                <p>Bạn có quyền yêu cầu xem, chỉnh sửa hoặc xóa thông tin cá nhân của mình. Nếu bạn muốn thực hiện điều này, vui lòng liên hệ với chúng tôi qua email hỗ trợ.</p>
+
+                                <h3>6. Thay đổi chính sách bảo mật</h3>
+                                <p><strong>Hệ thống dịch vụ Forestry 4.0</strong> có thể thay đổi chính sách bảo mật này bất kỳ lúc nào. Các thay đổi sẽ được thông báo trên website, và việc bạn tiếp tục sử dụng dịch vụ sau khi cập nhật chính sách bảo mật đồng nghĩa với việc bạn đồng ý với các thay đổi đó.</p>
+
+                                <p style="margin-top: 30px;">Trân trọng,<br><strong>Hệ thống dịch vụ Forestry 4.0</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

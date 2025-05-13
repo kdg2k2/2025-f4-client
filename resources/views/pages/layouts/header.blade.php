@@ -9,11 +9,11 @@
             </ul>
             <ul class="nav list-unstyled align-items-center">
                 <li>
-                    <a href="terms-of-service" class="nav-link"><i class="bi bi-person me-2"></i>Điều khoản</a>
+                    <a href="terms-of-service" class="nav-link"><i class="bi bi-shield-check me-2"></i>Điều khoản</a>
                 </li>
                 <li>
-                    <a href="privacy-policy" class="nav-link d-flex"><i class="bi bi-shield-check me-2"></i>Chính
-                        sách</a>
+                    <a href="vnpay-payment-instructions" class="nav-link"><i class="bi bi-credit-card-2-front me-2"></i>Hướng
+                        dẫn thanh toán VNPAY</a>
                 </li>
                 <li>
                     <a href="faq" class="nav-link d-flex"><i class="bi bi-question-circle me-2"></i>Câu hỏi thường
@@ -47,8 +47,8 @@
                             <i class="bi bi-telephone text-white"></i>
                         </span>
                         <div class="d-none d-md-block">
-                            <a href="tel:02462920379" class="nav-link tx-15 p-0">Liên hệ</a>
-                            <a href="tel:02462920379" class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">0246.292.0379</a>
+                            <a href="tel:0936468342" class="nav-link tx-15 p-0">Liên hệ</a>
+                            <a href="tel:0936468342" class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">0936.468.342</a>
                         </div>
                     </li>
                     <li class="d-flex align-items-center position-relative">
@@ -59,7 +59,7 @@
                         <div class="d-none d-md-block">
                             <a href="mailto:info@tanmaixanh.vn" class="nav-link tx-15 p-0">Gửi email</a>
                             <a href="mailto:info@tanmaixanh.vn"
-                                class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">info@tanmaixanh.vn</a>
+                               class="mb-0 nav-link p-0 tx-13 op-8 lh-sm">info@tanmaixanh.vn</a>
                         </div>
                     </li>
                 </ul>
@@ -98,191 +98,71 @@
                             <ul class="slide-menu child1 mega-slide-menu item-one mega-slide-menu-onefr without-icon"
                                 data-popper-placement="bottom" style="">
                                 <li class="mega-menu document-field">
+
                                     <div class="">
                                         <ul>
-                                            <li class="slide">
-                                                <a href="document/1" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
+                                            @foreach($documentFieldCol1 as $item)
+                                                <li class="slide">
+                                                    <a href="tai-lieu/{{$item->slug}}" class="side-menu__item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-3">
                                                             <span
-                                                                class="avatar header__dropavatar bg-secondary-transparent rounded-circle">
-                                                                <i class="bi bi-shield-check me-0 tx-secondary"></i>
+                                                                class="avatar header__dropavatar {{$item->bg_class}} rounded-circle">
+                                                                <i class="{{$item->icon_class}} me-0 {{$item->tx_class}}"></i>
                                                             </span>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="d-block">{{$item->name}}</h6>
+                                                            </div>
                                                         </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Quy định chống phá rừng EU</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/2" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-success-transparent rounded-circle">
-                                                                <i class="bi bi-patch-check me-0 tx-success"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Quỹ bảo vệ phát triển rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/3" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-purple-transparent rounded-circle">
-                                                                <i class="bi bi-flower3 me-0 tx-purple"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Giống Lâm nghiệp - Lâm sinh</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/4" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-info-transparent rounded-circle">
-                                                                <i class="bi bi-brightness-low me-0 tx-info"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Mùa vụ trồng rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
 
                                     <div class="">
                                         <ul>
-                                            <li class="slide">
-                                                <a href="document/5" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
+                                            @foreach($documentFieldCol2 as $item)
+                                                <li class="slide">
+                                                    <a href="tai-lieu/{{$item->slug}}" class="side-menu__item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-3">
                                                             <span
-                                                                class="avatar header__dropavatar bg-pink-transparent rounded-circle">
-                                                                <i class="bi bi-tree me-0 tx-pink"></i>
+                                                                class="avatar header__dropavatar {{$item->bg_class}} rounded-circle">
+                                                                <i class="{{$item->icon_class}} me-0 {{$item->tx_class}}"></i>
                                                             </span>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="d-block">{{$item->name}}</h6>
+                                                            </div>
                                                         </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Quản lý rừng bền vững</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="slide">
-                                                <a href="document/6" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-danger-transparent rounded-circle">
-                                                                <i class="bi bi-coin me-0 tx-danger"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Khung giá rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/7" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-warning-transparent rounded-circle">
-                                                                <i class="bi bi-journal-check me-0 tx-warning"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Tiêu chuẩn Việt Nam</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/8" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-teal-transparent rounded-circle">
-                                                                <i class="bi bi-currency-euro me-0 tx-teal"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Định mức kinh tế kỹ thuật</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
-                                    {{-- <div class="">
+                                     <div class="">
                                         <ul>
-                                            <li class="slide">
-                                                <a href="document/1" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
+                                            @foreach($documentFieldCol3 as $item)
+                                                <li class="slide">
+                                                    <a href="tai-lieu/{{$item->slug}}" class="side-menu__item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-3">
                                                             <span
-                                                                class="avatar header__dropavatar bg-secondary-transparent rounded-circle">
-                                                                <i class="bi bi-twitter me-0 tx-secondary"></i>
+                                                                class="avatar header__dropavatar {{$item->bg_class}} rounded-circle">
+                                                                <i class="{{$item->icon_class}} me-0 {{$item->tx_class}}"></i>
                                                             </span>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="d-block">{{$item->name}}</h6>
+                                                            </div>
                                                         </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Đa dạng sinh học</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/1" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-success-transparent rounded-circle">
-                                                                <i class="bi bi-layers me-0 tx-success"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Dự án điều tra rừng</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="slide">
-                                                <a href="document/1" class="side-menu__item">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="me-3">
-                                                            <span
-                                                                class="avatar header__dropavatar bg-primary-transparent rounded-circle">
-                                                                <i class="bi bi-c-circle me-0 tx-primary"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <h6 class="d-block">Chi trả Các bon</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
-                                    </div> --}}
+                                    </div>
                                 </li>
                             </ul>
                         </li>
@@ -440,7 +320,7 @@
                         </li> --}}
 
                         <li class="slide">
-                            <a href="#pricing" class="side-menu__item">
+                            <a href="/#pricing" class="side-menu__item">
                                 <span class="side-menu__label">Bảng giá</span>
                             </a>
                         </li>
@@ -475,16 +355,16 @@
                                     <ul class="slide-menu child2">
                                         <li class="slide">
                                             <a target="_blank"
-                                                href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1"
-                                                class="side-menu__item">
+                                               href="https://play.google.com/store/apps/details?id=com.forestry_4_v7&pli=1"
+                                               class="side-menu__item">
                                                 <span class="fw-500 tx-15">Andoird (ChPlay)</span>
                                             </a>
                                         </li>
 
                                         <li class="slide">
                                             <a target="_blank"
-                                                href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi"
-                                                class="side-menu__item">
+                                               href="https://apps.apple.com/vn/app/forestry-4-0/id6452552409?l=vi"
+                                               class="side-menu__item">
                                                 <span class="fw-500 tx-15">IOS (AppStore)</span>
                                             </a>
                                         </li>
@@ -495,7 +375,8 @@
                     </ul>
                     <div class="d-xl-flex d-lg-none d-grid gap-2 text-center">
                         <a href="register" id="register-btn" class="btn btn-secondary min-w-fit-content">Đăng ký</a>
-                        <a href="login" id="login-btn" class="btn btn-outline-light login-btn min-w-fit-content">Đăng nhập</a>
+                        <a href="login" id="login-btn" class="btn btn-outline-light login-btn min-w-fit-content">Đăng
+                            nhập</a>
                     </div>
                 </nav>
             </div>

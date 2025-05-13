@@ -14,7 +14,7 @@
             </li>
             <li class="sidebar-list">
                 <i class="fa-solid fa-thumbtack"></i>
-                <a class="sidebar-link" href="/admin">
+                <a class="sidebar-link" href="/admin/dashboard">
                     <svg class="stroke-icon">
                         <use href="template-admin/admin/svg/iconly-sprite.svg#Home-dashboard"></use>
                     </svg>
@@ -64,47 +64,67 @@
 
             <li class="sidebar-main-title">
                 <div>
-                    <h5 class="f-w-700 sidebar-title pt-3">MỤC KHÁC</h5>
+                    <h5 class="f-w-700 sidebar-title pt-3">Hỗ trợ</h5>
                 </div>
             </li>
 
             <li class="sidebar-list">
                 <i class="fa-solid fa-thumbtack"></i>
-                <a class="sidebar-link" href="javascript:void(0);">
-                    <svg class="stroke-icon">
-                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Info-circle"></use>
-                    </svg>
-                    <h6 class="f-w-600">Trợ giúp</h6>
-                </a>
-            </li>
-
-            <li class="sidebar-list">
-                <i class="fa-solid fa-thumbtack"></i>
-                <a class="sidebar-link" href="javascript:void(0);">
-                    <svg class="stroke-icon">
-                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Star-kit"></use>
-                    </svg>
-                    <h6 class="f-w-600">Điều khoản</h6>
-                </a>
-            </li>
-
-            <li class="sidebar-list">
-                <i class="fa-solid fa-thumbtack"></i>
-                <a class="sidebar-link" href="javascript:void(0);">
-                    <svg class="stroke-icon">
-                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Shield"></use>
-                    </svg>
-                    <h6 class="f-w-600">Chính sách</h6>
-                </a>
-            </li>
-
-            <li class="sidebar-list">
-                <i class="fa-solid fa-thumbtack"></i>
-                <a class="sidebar-link" href="javascript:void(0);">
+                <a class="sidebar-link" target="_blank" href="/faq">
                     <svg class="stroke-icon">
                         <use href="../template-admin/admin/svg/iconly-sprite.svg#Danger"></use>
                     </svg>
                     <h6 class="f-w-600">Câu hỏi thường gặp</h6>
+                </a>
+            </li>
+
+            <li class="sidebar-list">
+                <i class="fa-solid fa-thumbtack"></i>
+                <a class="sidebar-link" target="_blank" href="/terms-of-service">
+                    <svg class="stroke-icon">
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Star-kit"></use>
+                    </svg>
+                    <h6 class="f-w-600"> Điều khoản sử dụng</h6>
+                </a>
+            </li>
+
+            <li class="sidebar-list">
+                <i class="fa-solid fa-thumbtack"></i>
+                <a class="sidebar-link" target="_blank" href="/privacy-policy">
+                    <svg class="stroke-icon">
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Shield"></use>
+                    </svg>
+                    <h6 class="f-w-600">Chính sách bảo mật</h6>
+                </a>
+            </li>
+
+            <li class="sidebar-list">
+                <i class="fa-solid fa-thumbtack"></i>
+                <a class="sidebar-link" target="_blank" href="/privacy-policy">
+                    <svg class="stroke-icon">
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Tick-square"></use>
+                    </svg>
+                    <h6 class="f-w-600">Chính sách thanh toán</h6>
+                </a>
+            </li>
+
+            <li class="sidebar-list">
+                <i class="fa-solid fa-thumbtack"></i>
+                <a class="sidebar-link" target="_blank" href="#">
+                    <svg class="stroke-icon">
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Info-circle"></use>
+                    </svg>
+                    <h6 class="f-w-600">Hướng dẫn sử dụng</h6>
+                </a>
+            </li>
+
+            <li class="sidebar-list">
+                <i class="fa-solid fa-thumbtack"></i>
+                <a class="sidebar-link" target="_blank" href="/vnpay-payment-instructions">
+                    <svg class="stroke-icon">
+                        <use href="../template-admin/admin/svg/iconly-sprite.svg#Wallet"></use>
+                    </svg>
+                    <h6 class="f-w-600">Huớng dẫn thanh toán</h6>
                 </a>
             </li>
 

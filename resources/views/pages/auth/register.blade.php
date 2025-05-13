@@ -38,7 +38,7 @@
                                                     <label class="mb-2 fw-500">Họ tên<span
                                                             class="tx-danger ms-1">*</span></label>
                                                     <input name="name" class="form-control ms-0" type="text"
-                                                        placeholder="Enter First Name">
+                                                        placeholder="Nhập họ tên">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
@@ -46,7 +46,7 @@
                                                     <label class="mb-2 fw-500">Email<span
                                                             class="tx-danger ms-1">*</span></label>
                                                     <input name="email" class="form-control ms-0" type="email"
-                                                        placeholder="Enter your Email">
+                                                        placeholder="Nhập email">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
@@ -55,7 +55,7 @@
                                                             class="tx-danger ms-1">*</span></label>
                                                     <div class="input-group">
                                                         <input name="password" class="form-control ms-0 border-end-0"
-                                                            type="password" placeholder="Create a Password"
+                                                            type="password" placeholder="Nhật mật khẩu"
                                                             id="password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted">
@@ -71,7 +71,7 @@
                                                     <div class="input-group">
                                                         <input name="password_confirmation"
                                                             class="form-control ms-0 border-end-0" type="password"
-                                                            placeholder="Create a Password" id="re-password">
+                                                            placeholder="Xác nhận mật khẩu" id="re-password">
                                                         <a href="javascript:void(0)"
                                                             class="input-group-text bg-transparent tx-muted">
                                                             <i class="fe fe-eye tx-muted op-7" id="re-show-password"></i>

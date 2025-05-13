@@ -186,16 +186,16 @@ class AuthService extends BaseService
                 'start_date' => Carbon::now(),
                 'end_date' => Carbon::now()->addDays($p['duration_days']),
             ]);
-            $token = $this->generateVerificationToken($user['id'], $user['email']);
-            $this->emailService->sendMail(
-                'emails.verify_account',
-                'Xác thực tài khoản',
-                [$request['email']],
-                [
-                    'url' => route('verify-account', ['token' => $token, 'email' => $request['email']]),
-                    'name' => $user['name'],
-                ]
-            );
+            // $token = $this->generateVerificationToken($user['id'], $user['email']);
+            // $this->emailService->sendMail(
+            //     'emails.verify_account',
+            //     'Xác thực tài khoản',
+            //     [$request['email']],
+            //     [
+            //         'url' => route('verify-account', ['token' => urlencode($token), 'email' => $request['email']]),
+            //         'name' => $user['name'],
+            //     ]
+            // );
             return $user;
         });
     }
